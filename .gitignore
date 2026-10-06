@@ -1,99 +1,33 @@
-# ============================================
-# CHP-ANGOLA — .gitignore
-# ============================================
-
-# ============ CREDENCIAIS E AMBIENTE ============
+# Credenciais
 .env
 .env.local
-.env.*.local
-backend/.env
 api/config.local.php
-api/*.log
+*.log
 
-# ============ BASE DE DADOS ============
+# Base de dados
 *.db
 *.sqlite
-*.sqlite3
 data/
 backend/data/
 
-# ============ DEPENDÊNCIAS ============
+# Dependências
 node_modules/
 vendor/
 composer.lock
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
 
-# ============ BUILDS E CACHE ============
-dist/
-build/
-.cache/
-.parcel-cache/
-.next/
-.nuxt/
-
-# ============ SISTEMA OPERATIVO ============
+# Sistema
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
-desktop.ini
 
-# ============ EDITORES E IDES ============
+# Editores
 .vscode/
-!.vscode/extensions.json
 .idea/
-*.sublime-project
-*.sublime-workspace
 *.swp
-*.swo
-*~
-\#*\#
-.\#*
 
-# ============ LOGS ============
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
-
-# ============ BACKUPS E TEMPORÁRIOS ============
+# Backups
 *.bak
 *.tmp
-*.temp
-*.orig
-*~
-*.rej
-*.pid
-*.seed
-*.pid.lock
 
-# ============ EXPORTS ============
+# Exports
 *.csv
-!docs/*.csv
 leads_*.csv
-
-# ============ FICHEIROS SENSÍVEIS ============
-secrets.json
-credentials.json
-serviceAccountKey.json
-*.pem
-*.key
-*.crt
-!ssl.crt
-
-# ============ UPLOADS DO UTILIZADOR ============
-uploads/
-temp/
-tmp/
-
-# ============ TESTES E COBERTURA ============
-coverage/
-.nyc_output/
-*.lcov
