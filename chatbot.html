@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot CHP-Angola</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', -apple-system, sans-serif; }
+body { background: #0B2545; color: #fff; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+.chat-header { padding: 16px 20px; background: linear-gradient(135deg, #0B2545, #13335c); border-bottom: 2px solid #C5A059; display: flex; align-items: center; gap: 12px; }
+.chat-avatar { width: 40px; height: 40px; background: linear-gradient(135deg, #C5A059, #E8CE8F); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0B2545; font-weight: 800; font-size: 15px; position: relative; }
+.chat-avatar::after { content: ''; position: absolute; bottom: 0; right: 0; width: 11px; height: 11px; background: #10B981; border: 2px solid #0B2545; border-radius: 50%; }
+.chat-info h4 { font-size: 14px; font-weight: 700; }
+.chat-info span { font-size: 11px; color: #C5A059; }
+.chat-body { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; scroll-behavior: smooth; }
+.chat-body::-webkit-scrollbar { width: 5px; }
+.chat-body::-webkit-scrollbar-thumb { background: rgba(197, 160, 89, 0.3); border-radius: 3px; }
+.message { max-width: 85%; padding: 12px 16px; border-radius: 16px; font-size: 14px; line-height: 1.5; animation: msgIn 0.3s ease; }
+@keyframes msgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.message.bot { background: rgba(197, 160, 89, 0.12); border: 1px solid rgba(197, 160, 89, 0.25); border-bottom-left-radius: 4px; align-self: flex-start; }
+.message.user { background: linear-gradient(135deg, #C5A059, #D4B87A); color: #0B2545; font-weight: 500; border-bottom-right-radius: 4px; align-self: flex-end; }
+.quick-replies { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.quick-reply { padding: 8px 14px; background: transparent; border: 1px solid #C5A059; color: #C5A059; border-radius: 50px; font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.2s ease; }
+.quick-reply:hover { background: #C5A059; color: #0B2545; }
+.chat-input-area { padding: 14px 16px; border-top: 1px solid rgba(197, 160, 89, 0.2); background: #061529; display: flex; gap: 10px; align-items: center; }
+.chat-input { flex: 1; padding: 12px 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50px; color: #fff; font-size: 14px; font-family: inherit; outline: none; }
+.chat-input:focus { border-color: #C5A059; }
+.chat-input::placeholder { color: #64748B; }
+.send-btn { width: 42px; height: 42px; background: linear-gradient(135deg, #C5A059, #D4B87A); border: none; border-radius: 50%; color: #0B2545; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; }
+.send-btn:hover { transform: scale(1.08); }
+.send-btn svg { width: 18px; height: 18px; }
+.typing { display: inline-flex; gap: 4px; padding: 14px 18px; }
+.typing span { width: 7px; height: 7px; background: #C5A059; border-radius: 50%; animation: typing 1.2s infinite; }
+.typing span:nth-child(2) { animation-delay: 0.15s; }
+.typing span:nth-child(3) { animation-delay: 0.3s; }
+@keyframes typing { 0%, 60%, 100% { opacity: 0.3; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-4px); } }
+</style>
+</head>
+<body>
+
+<div class="chat-header">
+    <div class="chat-avatar">CH</div>
+    <div class="chat-info">
+        <h4>Assistente CHP-Angola</h4>
+        <span>● Online agora</span>
+    </div>
+</div>
+
+<div class="chat-body" id="chatBody">
+    <div class="message bot">
+        Olá! 👋 Sou o assistente virtual da CHP-Angola.<br><br>
+        Posso ajudar-lhe com informações sobre seguros, simulações ou marcar uma consultoria. Em que posso ajudar?
+    </div>
+    <div class="quick-replies" id="quickReplies">
+        <button class="quick-reply" onclick="sendMessage('Seguro automóvel')">Seguro Automóvel</button>
+        <button class="quick-reply" onclick="sendMessage('Seguro de saúde')">Seguro de Saúde</button>
+        <button class="quick-reply" onclick="sendMessage('Falar com consultor')">Falar com Consultor</button>
+    </div>
+</div>
+
+<div class="chat-input-area">
+    <input type="text" class="chat-input" id="chatInput" placeholder="Escreva a sua mensagem..." aria-label="Mensagem">
+    <button class="send-btn" onclick="sendMessage()" aria-label="Enviar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+</div>
+
+<script>
+const chatBody = document.getElementById('chatBody');
+const chatInput = document.getElementById('chatInput');
+const quickReplies = document.getElementById('quickReplies');
+
+const knowledgeBase = [
+    { patterns: ['seguro automóvel', 'seguro carro', 'carro', 'automóvel', 'viatura', 'seguro auto'], response: '🚗 <strong>Seguro Automóvel</strong><br><br>É obrigatório por lei em Angola (Decreto 35/09). A CHP-Angola compara várias seguradoras para lhe oferecer a melhor cobertura.<br><br>Quer que eu abra o simulador ou prefere falar com um consultor?', quickReplies: [{ text: 'Abrir simulador', action: 'link:#simulador' }, { text: 'Falar com consultor', action: 'link:https://wa.me/244929202707' }] },
+    { patterns: ['saúde', 'seguro saúde', 'hospital', 'clínica', 'médico'], response: '🏥 <strong>Seguro de Saúde</strong><br><br>Estamos a preparar esta cobertura. Acesso às melhores clínicas de Angola.', quickReplies: [{ text: 'Deixar dados', action: 'link:#contacto' }, { text: 'Falar com consultor', action: 'link:https://wa.me/244929202707' }] },
+    { patterns: ['vida', 'seguro vida'], response: '💙 <strong>Seguro de Vida</strong><br><br>A maior prova de amor e estabilidade financeira para quem mais depende de si. Em preparação na CHP-Angola.', quickReplies: [{ text: 'Deixar dados', action: 'link:#contacto' }] },
+    { patterns: ['património', 'casa', 'habitação', 'agricultura', 'empresa', 'frota'], response: '🏢 <strong>Património & Empresas</strong><br><br>Proteção para habitações, escritórios, frotas corporativas, agricultura e colheitas.', quickReplies: [{ text: 'Pedir proposta', action: 'link:#contacto' }] },
+    { patterns: ['preço', 'custa', 'valor', 'quanto', 'custo', 'preco'], response: '💰 <strong>Preço dos Seguros</strong><br><br>O valor depende do tipo de veículo, idade do condutor e cobertura escolhida.<br><br>O nosso simulador dá uma estimativa em segundos!', quickReplies: [{ text: 'Abrir simulador', action: 'link:#simulador' }] },
+    { patterns: ['simular', 'simulação', 'simulador', 'estimativa'], response: '🎯 Vou abrir o <strong>simulador interativo</strong>! Responda a 3 perguntas e receba a estimativa.', quickReplies: [{ text: 'Abrir agora', action: 'link:#simulador' }] },
+    { patterns: ['contacto', 'contactar', 'telefone', 'email', 'falar', 'consultor', 'whatsapp', 'ligar'], response: '📞 <strong>Canais de Contacto</strong><br><br>• Telefone: +244 929 202 707<br>• WhatsApp: mesmo número<br>• E-mail: geral@chp-angola.com<br><br>Respondemos em menos de 24h!', quickReplies: [{ text: 'WhatsApp agora', action: 'link:https://wa.me/244929202707' }, { text: 'Ligar', action: 'link:tel:+244929202707' }] },
+    { patterns: ['obrigatório', 'lei', 'legal', 'decreto', 'multa', 'coima'], response: '⚖️ <strong>Legalidade</strong><br><br>O seguro automóvel é <strong>obrigatório</strong> em Angola, segundo o Decreto n.º 35/09. Circular sem ele resulta em coimas elevadas.', quickReplies: [{ text: 'Abrir simulador', action: 'link:#simulador' }] },
+    { patterns: ['corretor', 'diferença', 'seguradora', 'porque', 'vantagem'], response: '🌟 <strong>Porquê escolher um corretor?</strong><br><br>Um corretor <strong>independente</strong> compara o mercado inteiro e defende os <strong>seus</strong> interesses — sem custo para si!' },
+    { patterns: ['olá', 'oi', 'bom dia', 'boa tarde', 'boa noite', 'hello'], response: 'Olá! 😊 Bem-vindo à CHP-Angola. Como posso ajudar hoje?', quickReplies: [{ text: 'Simular seguro', action: 'link:#simulador' }, { text: 'Falar com consultor', action: 'link:https://wa.me/244929202707' }] },
+    { patterns: ['obrigado', 'obrigada', 'valeu', 'thanks'], response: 'De nada! 🛡️ Estamos aqui para proteger o seu caminho.' },
+    { patterns: ['documentos', 'documento', 'preciso', 'necessário'], response: '📋 <strong>Documentos necessários</strong><br><br>• BI ou passaporte<br>• Carta de condução<br>• Livrete do veículo<br>• Comprovativo de residência<br><br>Para empresas: também NIF e alvará.' }
+];
+
+function addMessage(text, sender = 'user') {
+    const msg = document.createElement('div');
+    msg.className = 'message ' + sender;
+    msg.innerHTML = text;
+    chatBody.appendChild(msg);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    return msg;
+}
+
+function addTyping() {
+    const typing = document.createElement('div');
+    typing.className = 'message bot typing';
+    typing.innerHTML = '<span></span><span></span><span></span>';
+    chatBody.appendChild(typing);
+    chatBody.scrollTop = chatBody.scrollHeight;
+    return typing;
+}
+
+function addQuickReplies(replies) {
+    if (!replies || !replies.length) return;
+    const container = document.createElement('div');
+    container.className = 'quick-replies';
+    replies.forEach(r => {
+        const btn = document.createElement('button');
+        btn.className = 'quick-reply';
+        btn.textContent = r.text;
+        btn.onclick = () => {
+            if (r.action.startsWith('link:')) {
+                const url = r.action.replace('link:', '');
+                if (url.startsWith('#')) {
+                    window.parent.postMessage({ type: 'scrollTo', target: url }, '*');
+                } else {
+                    window.open(url, '_blank');
+                }
+            }
+        };
+        container.appendChild(btn);
+    });
+    chatBody.appendChild(container);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function getResponse(input) {
+    const text = input.toLowerCase().trim();
+    for (const entry of knowledgeBase) {
+        for (const pattern of entry.patterns) {
+            if (text.includes(pattern)) return entry;
+        }
+    }
+    return {
+        response: 'Hmm, não tenho a certeza sobre isso. 🤔<br><br>Mas posso ajudar com:<br>• Seguro automóvel<br>• Seguro de saúde<br>• Falar com um consultor<br><br>Ou contacte-nos diretamente pelo WhatsApp.',
+        quickReplies: [{ text: 'WhatsApp', action: 'link:https://wa.me/244929202707' }, { text: 'Falar com consultor', action: 'link:#contacto' }]
+    };
+}
+
+function sendMessage(text) {
+    const message = text || chatInput.value.trim();
+    if (!message) return;
+    if (quickReplies) quickReplies.remove();
+    addMessage(message, 'user');
+    chatInput.value = '';
+    const typing = addTyping();
+    setTimeout(() => {
+        typing.remove();
+        const { response, quickReplies: replies } = getResponse(message);
+        addMessage(response, 'bot');
+        if (replies) addQuickReplies(replies);
+    }, 900 + Math.random() * 600);
+}
+
+chatInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendMessage(); });
+</script>
+
+</body>
+</html>
