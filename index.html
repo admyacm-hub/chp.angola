@@ -1539,6 +1539,16 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
 
+    <!-- ============ BOTÃO INSTALAR PWA ============ -->
+<button class="pwa-install-btn" id="pwaInstallBtn" aria-label="Instalar aplicação CHP-Angola">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    <span>Instalar App</span>
+</button>
+
     <!-- CHATBOT -->
     <div id="chatbot-container" style="display:none; position: fixed; bottom: 170px; right: 25px; width: 360px; height: 520px; z-index: 10000; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.4); border: 1px solid rgba(197, 160, 89, 0.3);">
         <iframe src="./chatbot.html" style="width: 100%; height: 100%; border: none;" title="Chatbot"></iframe>
@@ -1897,6 +1907,120 @@
         // ============ YEAR ============
         const yearEl = document.getElementById('year');
         if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // ============ PWA INSTALL ============
+let deferredPrompt = null;
+const pwaBtn = document.getElementById('pwaInstallBtn');
+
+function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+function isStandalone() {
+    return window.matchMedia('(display-mode: standalone)').matches 
+        || window.navigator.standalone === true;
+}
+
+// Se já estiver instalada, não faz nada
+if (!isStandalone() && pwaBtn) {
+    
+    // === ANDROID/CHROME ===
+    window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        console.log('[PWA] beforeinstallprompt disponível');
+        
+        // Mostrar botão após 20 segundos
+        setTimeout(() => {
+            pwaBtn.classList.add('show');
+        }, 20000);
+    });
+
+    // === iOS - mostrar mesmo sem beforeinstallprompt ===
+    if (isIOS()) {
+        setTimeout(() => {
+            pwaBtn.classList.add('show');
+        }, 20000);
+    }
+
+    // === CLIQUE ===
+    pwaBtn.addEventListener('click', async () => {
+        // Android/Chrome: prompt nativo
+        if (deferredPrompt) {
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            console.log('[PWA] Resultado:', outcome);
+            deferredPrompt = null;
+            pwaBtn.classList.remove('show');
+            return;
+        }
+        
+        // iOS: instruções
+        if (isIOS()) {
+            showIOSInstructions();
+            return;
+        }
+        
+        // Outros: instruções genéricas
+        alert('Para instalar a app:\n\n• Chrome/Edge: menu ⋮ → "Instalar aplicação"\n• Safari (iPhone): Partilhar → "Adicionar ao Ecrã Principal"');
+    });
+}
+
+// === APP INSTALADA ===
+window.addEventListener('appinstalled', () => {
+    console.log('[PWA] App instalada');
+    if (pwaBtn) pwaBtn.classList.remove('show');
+    deferredPrompt = null;
+});
+
+// === MODAL iOS ===
+function showIOSInstructions() {
+    let modal = document.getElementById('iosInstallModal');
+    if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'iosInstallModal';
+        modal.className = 'ios-install-modal';
+        modal.innerHTML = `
+            <div class="ios-install-content">
+                <h3>Instalar no iPhone</h3>
+                <p>Siga estes passos no Safari para adicionar a CHP-Angola ao ecrã principal:</p>
+                
+                <div class="ios-install-step">
+                    <div class="ios-install-step-num">1</div>
+                    <div>
+                        <strong>Toque em "Partilhar"</strong>
+                        <span>O ícone quadrado com seta para cima, no fundo do ecrã</span>
+                    </div>
+                </div>
+                
+                <div class="ios-install-step">
+                    <div class="ios-install-step-num">2</div>
+                    <div>
+                        <strong>Escolha "Adicionar ao Ecrã Principal"</strong>
+                        <span>Deslize para baixo até encontrar esta opção</span>
+                    </div>
+                </div>
+                
+                <div class="ios-install-step">
+                    <div class="ios-install-step-num">3</div>
+                    <div>
+                        <strong>Toque em "Adicionar"</strong>
+                        <span>O ícone CHP-Angola aparecerá no ecrã principal</span>
+                    </div>
+                </div>
+                
+                <button class="ios-install-close" onclick="document.getElementById('iosInstallModal').classList.remove('show')">
+                    Entendi
+                </button>
+            </div>
+        `;
+        document.body.appendChild(modal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) modal.classList.remove('show');
+        });
+    }
+    modal.classList.add('show');
+}
 
         // ============ SERVICE WORKER ============
         if ('serviceWorker' in navigator) {
