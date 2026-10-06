@@ -4,8 +4,9 @@
   "description": "Simulador de seguro automóvel, pedidos de cotação e contacto direto com a CHP-Angola. Proteção premium em Angola.",
   "lang": "pt-AO",
   "dir": "ltr",
-  "start_url": "/chp.angola/?utm_source=pwa",
-  "scope": "/chp.angola/",
+  "start_url": "./",
+  "scope": "./",
+  "id": "/chp.angola/",
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "orientation": "portrait-primary",
@@ -38,22 +39,28 @@
       "name": "Simulador de Seguro",
       "short_name": "Simulador",
       "description": "Calcular estimativa de seguro automóvel em 3 passos",
-      "url": "/chp.angola/?action=simulador#simulador",
-      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
-    },
-    {
-      "name": "Falar por WhatsApp",
-      "short_name": "WhatsApp",
-      "description": "Contactar diretamente a CHP-Angola por WhatsApp",
-      "url": "https://wa.me/244929202707?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20da%20app%20CHP-Angola.",
-      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+      "url": "./#simulador",
+      "icons": [
+        { "src": "./icons/icon-192.png", "sizes": "192x192" }
+      ]
     },
     {
       "name": "Pedir Cotação",
       "short_name": "Cotação",
       "description": "Pedir uma simulação personalizada",
-      "url": "/chp.angola/?action=cotacao#contacto",
-      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
+      "url": "./#contacto",
+      "icons": [
+        { "src": "./icons/icon-192.png", "sizes": "192x192" }
+      ]
+    },
+    {
+      "name": "Sobre Nós",
+      "short_name": "Sobre",
+      "description": "Conhecer a CHP-Angola",
+      "url": "./#sobre",
+      "icons": [
+        { "src": "./icons/icon-192.png", "sizes": "192x192" }
+      ]
     }
   ],
   "related_applications": []
