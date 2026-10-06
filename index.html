@@ -3,38 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>CHP-Angola Corretores de Seguros — Proteção Premium em Angola</title>
-    <meta name="description" content="CHP-Angola — Simulador interativo, seguro automóvel obrigatório, saúde, vida e património. Experiência premium em Angola.">
+    
+    <title>CHP-Angola Corretores de Seguros — Segurança que acompanha o seu caminho</title>
+    <meta name="description" content="CHP-Angola Corretores de Seguros — Simulador interativo, seguro automóvel obrigatório, saúde, vida e património. Simulação gratuita em 24h.">
     <meta name="keywords" content="seguro automóvel Angola, corretor de seguros Luanda, seguro obrigatório Angola, CHP-Angola, simulador seguro">
+    <meta name="author" content="CHP-Angola Corretores de Seguros">
+    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0B2545">
-    <meta name="color-scheme" content="light dark">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CHP-Angola — Segurança que acompanha o seu caminho">
+    <meta property="og:description" content="Proteja a sua família, o seu automóvel e quem o rodeia. Simulação gratuita em 24h.">
+    <meta property="og:image" content="https://admyacm-hub.github.io/chp.angola/icons/og-image.jpg">
+    <meta property="og:url" content="https://admyacm-hub.github.io/chp.angola/">
+    <meta property="og:locale" content="pt_AO">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CHP-Angola — Corretores de Seguros">
+    <meta name="twitter:description" content="Proteja o seu caminho com a solidez que exige.">
+    
+    <link rel="canonical" href="https://admyacm-hub.github.io/chp.angola/">
     
     <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="CHP-Angola">
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="CHP-Angola — Segurança que acompanha o seu caminho">
-    <meta property="og:description" content="Proteja a sua família, o seu automóvel e quem o rodeia.">
-    <meta property="og:image" content="https://chp-angola.com/icons/og-image.jpg">
-    <meta property="og:url" content="https://chp-angola.com">
-    <meta property="og:locale" content="pt_AO">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <link rel="canonical" href="https://chp-angola.com/">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 2C20 2 34 5 34 16C34 26 20 38 20 38C20 38 6 26 6 16C6 5 20 2 20 2Z' fill='%23C5A059'/%3E%3Cpath d='M20 4C20 4 32 6.7 32 16.5C32 25.1 19.5 35.6 19.5 35.6C19.5 35.6 7 25.1 7 16.5C7 6.7 20 4 20 4Z' fill='%230B2545'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
     
-    <!-- Three.js para esfera 3D -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
-    <!-- Lottie para animações -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" defer></script>
     
     <script type="application/ld+json">
@@ -42,8 +47,8 @@
       "@context": "https://schema.org",
       "@type": "InsuranceAgency",
       "name": "CHP-Angola Corretores de Seguros",
-      "url": "https://chp-angola.com",
-      "telephone": "+244927635370",
+      "url": "https://admyacm-hub.github.io/chp.angola/",
+      "telephone": "+244929202707",
       "email": "geral@chp-angola.com",
       "address": { "@type": "PostalAddress", "addressCountry": "AO", "addressLocality": "Luanda" },
       "areaServed": "Angola"
@@ -51,7 +56,6 @@
     </script>
 
     <style>
-        /* ========== VARIÁVEIS ========== */
         :root {
             --primary-blue: #0B2545;
             --primary-blue-dark: #061529;
@@ -75,7 +79,6 @@
             --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
-        /* ========== DARK MODE ========== */
         [data-theme="dark"] {
             --primary-blue: #0a1424;
             --primary-blue-light: #1a2740;
@@ -84,23 +87,8 @@
             --text-dark: #E2E8F0;
             --text-muted: #94A3B8;
             --white: #131c2e;
-            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-            --card-shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }
-        [data-theme="dark"] body { background: var(--bg-dark); color: var(--text-dark); }
-        [data-theme="dark"] header { background: rgba(10, 20, 36, 0.85); }
-        [data-theme="dark"] .service-card,
-        [data-theme="dark"] .testimonial-card,
-        [data-theme="dark"] .contact-form-container,
-        [data-theme="dark"] .main-featured-service { background: #131c2e; border-color: rgba(197, 160, 89, 0.2); }
-        [data-theme="dark"] .faq-item { background: #0f1729; }
-        [data-theme="dark"] .faq-item[open] { background: #131c2e; }
-        [data-theme="dark"] .section-header h2 { color: #E2E8F0; }
-        [data-theme="dark"] .form-control { background: #0f1729; border-color: #1e293b; color: #E2E8F0; }
-        [data-theme="dark"] .value-card { background: #131c2e; }
-        [data-theme="dark"] .mission-box { background: linear-gradient(135deg, #061529 0%, #0a1424 100%); }
 
-        /* ========== BASE ========== */
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; scroll-padding-top: 90px; }
         body {
@@ -118,42 +106,27 @@
         a { color: inherit; }
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-        /* ========== THEME TOGGLE ========== */
+        /* THEME TOGGLE */
         .theme-toggle {
-            position: fixed;
-            top: 90px;
-            right: 20px;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: var(--primary-blue);
-            border: 1.5px solid var(--accent-gold);
-            color: var(--accent-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: none;
-            z-index: 997;
-            transition: all 0.4s var(--transition-smooth);
+            position: fixed; top: 90px; right: 20px;
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--primary-blue); border: 1.5px solid var(--accent-gold);
+            color: var(--accent-gold); display: flex; align-items: center; justify-content: center;
+            cursor: none; z-index: 997; transition: all 0.4s var(--transition-smooth);
             backdrop-filter: blur(10px);
         }
         .theme-toggle:hover { transform: rotate(180deg) scale(1.1); box-shadow: var(--glow-gold); }
-        .theme-toggle svg { width: 20px; height: 20px; transition: transform 0.4s ease; }
-        .theme-toggle .sun { display: block; }
+        .theme-toggle svg { width: 20px; height: 20px; }
         .theme-toggle .moon { display: none; }
         [data-theme="dark"] .theme-toggle .sun { display: none; }
         [data-theme="dark"] .theme-toggle .moon { display: block; }
-        @media (max-width: 768px) { .theme-toggle { top: 80px; right: 15px; width: 40px; height: 40px; } }
 
-        /* ========== CURSOR ========== */
+        /* CURSOR */
         .cursor-dot, .cursor-ring {
-            position: fixed; top: 0; left: 0;
-            pointer-events: none;
-            z-index: 99999;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
+            position: fixed; top: 0; left: 0; pointer-events: none;
+            z-index: 99999; border-radius: 50%; transform: translate(-50%, -50%);
             will-change: transform;
-            transition: width 0.3s var(--transition-smooth), height 0.3s var(--transition-smooth), background-color 0.3s, border-color 0.3s;
+            transition: width 0.3s, height 0.3s, background-color 0.3s, border-color 0.3s;
         }
         .cursor-dot { width: 8px; height: 8px; background: var(--accent-gold); }
         .cursor-ring { width: 40px; height: 40px; border: 1.5px solid var(--accent-gold); }
@@ -161,41 +134,37 @@
         .cursor-ring.click { width: 30px; height: 30px; background: rgba(197, 160, 89, 0.4); }
         @media (max-width: 900px) { .cursor-dot, .cursor-ring { display: none; } }
 
-        /* ========== SCROLL PROGRESS ========== */
+        /* SCROLL PROGRESS */
         .scroll-progress {
             position: fixed; top: 0; left: 0; height: 3px; width: 0%;
-            background: var(--gradient-gold);
-            z-index: 9999;
+            background: var(--gradient-gold); z-index: 9999;
             box-shadow: 0 0 10px rgba(197, 160, 89, 0.6);
         }
 
-        /* ========== LOADER ========== */
+        /* LOADER */
         .loader {
-            position: fixed; inset: 0;
-            background: var(--primary-blue);
-            z-index: 99999;
-            display: flex; align-items: center; justify-content: center;
+            position: fixed; inset: 0; background: var(--primary-blue);
+            z-index: 99999; display: flex; align-items: center; justify-content: center;
             flex-direction: column; gap: 30px;
             transition: opacity 0.6s ease, visibility 0.6s ease;
         }
         .loader.hidden { opacity: 0; visibility: hidden; }
         .loader-logo { width: 80px; height: 80px; animation: loaderPulse 1.6s ease-in-out infinite; }
-        @keyframes loaderPulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.08); opacity: 0.85; } }
+        @keyframes loaderPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); opacity: 0.85; } }
         .loader-bar { width: 200px; height: 2px; background: rgba(197, 160, 89, 0.2); border-radius: 2px; overflow: hidden; position: relative; }
         .loader-bar::after { content: ''; position: absolute; top: 0; left: -40%; height: 100%; width: 40%; background: var(--gradient-gold); border-radius: 2px; animation: loaderSlide 1.4s ease-in-out infinite; }
         @keyframes loaderSlide { 0% { left: -40%; } 100% { left: 100%; } }
         .loader-text { color: var(--accent-gold); font-size: 11px; letter-spacing: 4px; text-transform: uppercase; font-weight: 500; }
 
-        /* ========== BOTÕES ========== */
+        /* BOTÕES */
         .btn {
             display: inline-flex; align-items: center; justify-content: center; gap: 10px;
             padding: 15px 32px; border-radius: 50px;
             font-weight: 600; text-decoration: none; cursor: none;
             transition: all 0.4s var(--transition-smooth);
             text-align: center; font-size: 14px;
-            border: 2px solid transparent;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 0.3px; position: relative; overflow: hidden;
+            border: 2px solid transparent; font-family: 'Inter', sans-serif;
+            position: relative; overflow: hidden;
         }
         .btn svg { width: 18px; height: 18px; transition: transform 0.4s ease; }
         .btn:hover svg { transform: translateX(4px); }
@@ -213,7 +182,7 @@
         .btn-outline { background: transparent; color: var(--white); border-color: rgba(255, 255, 255, 0.35); backdrop-filter: blur(6px); }
         .btn-outline:hover { background: var(--white); color: var(--primary-blue); border-color: var(--white); transform: translateY(-3px); }
 
-        /* ========== HEADER ========== */
+        /* HEADER */
         header {
             background: rgba(11, 37, 69, 0.85);
             backdrop-filter: blur(14px);
@@ -245,28 +214,20 @@
         }
         nav a:hover::after, nav a.active::after { width: 100%; }
         nav a:hover, nav a.active { color: var(--accent-gold-light); }
-        .nav-cta { padding: 10px 22px; font-size: 13px; position: relative; overflow: hidden; }
+        .nav-cta { padding: 10px 22px; font-size: 13px; }
         .nav-cta::after { display: none; }
-        .menu-toggle {
-            display: none; flex-direction: column; gap: 6px; cursor: none;
-            background: none; border: none; padding: 5px; z-index: 1001;
-        }
+        .menu-toggle { display: none; flex-direction: column; gap: 6px; cursor: none; background: none; border: none; padding: 5px; z-index: 1001; }
         .menu-toggle span { width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s ease; }
         .menu-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
         .menu-toggle.active span:nth-child(2) { opacity: 0; }
         .menu-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
         #mobile-menu-checkbox { display: none; }
 
-        /* ========== HERO COM VÍDEO + 3D ========== */
+        /* HERO */
         .hero {
             min-height: 100vh; display: flex; align-items: center;
             position: relative; background: var(--primary-blue); color: var(--white);
             overflow: hidden; padding: 120px 0 80px 0;
-        }
-        .hero-video {
-            position: absolute; inset: 0; z-index: 0;
-            width: 100%; height: 100%; object-fit: cover;
-            opacity: 0.25; filter: brightness(0.6) contrast(1.1);
         }
         .hero-video-fallback {
             position: absolute; inset: 0; z-index: 0;
@@ -275,12 +236,8 @@
                         var(--primary-blue);
         }
         .hero-canvas {
-            position: absolute;
-            top: 50%; right: 5%;
-            transform: translateY(-50%);
-            width: 400px; height: 400px;
-            z-index: 3;
-            pointer-events: none;
+            position: absolute; top: 50%; right: 5%; transform: translateY(-50%);
+            width: 400px; height: 400px; z-index: 3; pointer-events: none;
         }
         @media (max-width: 992px) { .hero-canvas { display: none; } }
         .hero-grid {
@@ -294,22 +251,16 @@
         }
         .hero-particles { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
         .particle { position: absolute; background: var(--accent-gold); border-radius: 50%; opacity: 0.4; animation: floatParticle linear infinite; }
-        @keyframes floatParticle {
-            0% { transform: translateY(0) translateX(0); opacity: 0; }
-            10%, 90% { opacity: 0.5; }
-            100% { transform: translateY(-120vh) translateX(60px); opacity: 0; }
-        }
+        @keyframes floatParticle { 0% { transform: translateY(0) translateX(0); opacity: 0; } 10%, 90% { opacity: 0.5; } 100% { transform: translateY(-120vh) translateX(60px); opacity: 0; } }
         .hero-content { position: relative; z-index: 10; max-width: 900px; text-align: center; margin: 0 auto; padding: 0 24px; }
         .hero-badge {
             display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(197, 160, 89, 0.1);
-            border: 1px solid rgba(197, 160, 89, 0.4);
+            background: rgba(197, 160, 89, 0.1); border: 1px solid rgba(197, 160, 89, 0.4);
             padding: 8px 20px; border-radius: 50px;
             font-size: 12px; color: var(--accent-gold-light);
             letter-spacing: 1.5px; text-transform: uppercase; font-weight: 500;
             margin-bottom: 30px; opacity: 0;
-            animation: fadeInUp 0.8s 1.8s ease forwards;
-            backdrop-filter: blur(6px);
+            animation: fadeInUp 0.8s 1.8s ease forwards; backdrop-filter: blur(6px);
         }
         .hero-badge-dot { width: 8px; height: 8px; background: var(--accent-gold); border-radius: 50%; animation: badgePulse 1.6s infinite; }
         @keyframes badgePulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.3); } }
@@ -333,16 +284,11 @@
         }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .hero-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeInUp 0.8s 1.4s ease forwards; }
-        .trust-strip {
-            display: flex; justify-content: center; gap: 40px;
-            margin-top: 60px; flex-wrap: wrap; opacity: 0;
-            animation: fadeInUp 0.8s 1.6s ease forwards;
-        }
+        .trust-strip { display: flex; justify-content: center; gap: 40px; margin-top: 60px; flex-wrap: wrap; opacity: 0; animation: fadeInUp 0.8s 1.6s ease forwards; }
         .trust-item { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #CBD5E1; }
         .trust-item-icon {
             width: 36px; height: 36px; border-radius: 50%;
-            background: rgba(197, 160, 89, 0.12);
-            border: 1px solid rgba(197, 160, 89, 0.3);
+            background: rgba(197, 160, 89, 0.12); border: 1px solid rgba(197, 160, 89, 0.3);
             display: flex; align-items: center; justify-content: center; color: var(--accent-gold);
         }
         .trust-item-icon svg { width: 18px; height: 18px; }
@@ -352,74 +298,26 @@
             position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
             z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 8px;
             color: var(--accent-gold); font-size: 10px; letter-spacing: 3px;
-            text-transform: uppercase; opacity: 0;
-            animation: fadeInUp 0.8s 2.2s ease forwards;
+            text-transform: uppercase; opacity: 0; animation: fadeInUp 0.8s 2.2s ease forwards;
         }
         .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--accent-gold), transparent); position: relative; overflow: hidden; }
         .scroll-line::after { content: ''; position: absolute; top: -40px; left: 0; width: 100%; height: 40px; background: var(--white); animation: scrollDown 2s ease-in-out infinite; }
         @keyframes scrollDown { 0% { top: -40px; } 100% { top: 40px; } }
 
-        /* ========== COUNTER (PROVA SOCIAL REAL-TIME) ========== */
-        .social-counter {
-            background: var(--primary-blue-dark);
-            color: var(--white);
-            padding: 30px 0;
-            border-top: 1px solid rgba(197, 160, 89, 0.2);
-            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
-            position: relative; overflow: hidden;
-        }
-        .counter-inner {
-            display: flex; justify-content: center; gap: 60px;
-            flex-wrap: wrap; padding: 0 24px;
-        }
-        .counter-item { text-align: center; }
-        .counter-value {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px; font-weight: 800;
-            background: var(--gradient-gold);
-            -webkit-background-clip: text; background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1; margin-bottom: 8px;
-            display: inline-block;
-        }
-        .counter-label {
-            font-size: 12px; color: #94A3B8;
-            letter-spacing: 2px; text-transform: uppercase;
-        }
-        .counter-live {
-            display: inline-flex; align-items: center; gap: 6px;
-            font-size: 10px; color: #10B981;
-            background: rgba(16, 185, 129, 0.1);
-            padding: 3px 10px; border-radius: 50px;
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            margin-left: 8px; vertical-align: middle;
-            letter-spacing: 1px;
-        }
-        .counter-live::before {
-            content: ''; width: 6px; height: 6px;
-            background: #10B981; border-radius: 50%;
-            animation: livePulse 1.5s infinite;
-        }
-        @keyframes livePulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
-        /* ========== SEÇÕES ========== */
+        /* CONTAINER */
         .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 24px; }
         section { padding: 100px 0; position: relative; }
         .section-header { text-align: center; max-width: 760px; margin: 0 auto 60px auto; }
         .section-label {
             display: inline-block; font-size: 11px; letter-spacing: 4px;
             text-transform: uppercase; color: var(--accent-gold);
-            font-weight: 600; margin-bottom: 14px;
-            font-family: 'Inter', sans-serif;
+            font-weight: 600; margin-bottom: 14px; font-family: 'Inter', sans-serif;
         }
-        .section-header h2 {
-            font-size: clamp(28px, 3.5vw, 44px); color: var(--primary-blue);
-            margin-bottom: 18px; font-weight: 800; line-height: 1.2;
-        }
+        .section-header h2 { font-size: clamp(28px, 3.5vw, 44px); color: var(--primary-blue); margin-bottom: 18px; font-weight: 800; line-height: 1.2; }
         [data-theme="dark"] .section-header h2 { color: #E2E8F0; }
         .section-header p { color: var(--text-muted); font-size: 16px; max-width: 620px; margin: 0 auto; }
 
-        /* ========== SERVIÇOS ========== */
+        /* SERVIÇOS */
         .services { background: var(--bg-ivory); position: relative; overflow: hidden; }
         .services::before {
             content: ''; position: absolute; top: -200px; right: -200px;
@@ -440,22 +338,16 @@
             padding: 8px 18px; border-radius: 50px;
             font-size: 12px; font-weight: 600;
             display: inline-flex; align-items: center; gap: 8px;
-            margin-bottom: 22px;
-            border: 1px solid rgba(197, 160, 89, 0.3);
+            margin-bottom: 22px; border: 1px solid rgba(197, 160, 89, 0.3);
         }
         .featured-title { font-size: clamp(22px, 2.5vw, 30px); color: var(--primary-blue); margin-bottom: 16px; font-weight: 800; }
         [data-theme="dark"] .featured-title { color: #E2E8F0; }
         .featured-desc { font-size: 16px; color: var(--text-dark); margin-bottom: 40px; line-height: 1.8; }
         .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
-        .benefit-item {
-            display: flex; gap: 16px; padding: 20px;
-            border-radius: 12px; transition: all 0.4s var(--transition-smooth);
-            border: 1px solid transparent;
-        }
+        .benefit-item { display: flex; gap: 16px; padding: 20px; border-radius: 12px; transition: all 0.4s var(--transition-smooth); border: 1px solid transparent; }
         .benefit-item:hover { background: var(--bg-light); border-color: rgba(197, 160, 89, 0.2); transform: translateX(6px); }
         .benefit-icon-wrapper {
-            flex-shrink: 0; width: 44px; height: 44px;
-            border-radius: 12px;
+            flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px;
             background: linear-gradient(135deg, rgba(197, 160, 89, 0.15), rgba(197, 160, 89, 0.05));
             border: 1px solid rgba(197, 160, 89, 0.25);
             display: flex; align-items: center; justify-content: center;
@@ -466,16 +358,12 @@
         .benefit-text h4 { font-family: 'Inter', sans-serif; font-size: 16px; color: var(--primary-blue); margin-bottom: 6px; font-weight: 700; }
         [data-theme="dark"] .benefit-text h4 { color: #E2E8F0; }
         .benefit-text p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
-        .future-services-title {
-            text-align: center; font-size: clamp(18px, 2vw, 22px);
-            color: var(--primary-blue); margin: 60px auto 35px auto;
-            font-weight: 700; max-width: 620px; line-height: 1.4;
-        }
+        .future-services-title { text-align: center; font-size: clamp(18px, 2vw, 22px); color: var(--primary-blue); margin: 60px auto 35px auto; font-weight: 700; max-width: 620px; line-height: 1.4; }
         [data-theme="dark"] .future-services-title { color: #E2E8F0; }
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
         .service-card {
-            background: var(--white); padding: 40px 32px;
-            border-radius: 20px; border: 1px solid rgba(197, 160, 89, 0.15);
+            background: var(--white); padding: 40px 32px; border-radius: 20px;
+            border: 1px solid rgba(197, 160, 89, 0.15);
             transition: all 0.5s var(--transition-smooth);
             position: relative; overflow: hidden; cursor: none;
         }
@@ -496,11 +384,7 @@
             transition: all 0.5s var(--transition-smooth);
         }
         [data-theme="dark"] .service-card-icon-wrapper { color: var(--accent-gold); }
-        .service-card:hover .service-card-icon-wrapper {
-            background: var(--gradient-blue); color: var(--accent-gold);
-            transform: scale(1.08) rotate(-6deg);
-            box-shadow: 0 10px 25px -8px rgba(11, 37, 69, 0.4);
-        }
+        .service-card:hover .service-card-icon-wrapper { background: var(--gradient-blue); color: var(--accent-gold); transform: scale(1.08) rotate(-6deg); }
         .service-card-icon-wrapper svg { width: 28px; height: 28px; }
         .service-card h3 { font-family: 'Inter', sans-serif; font-size: 19px; color: var(--primary-blue); margin-bottom: 14px; font-weight: 700; }
         [data-theme="dark"] .service-card h3 { color: #E2E8F0; }
@@ -512,14 +396,9 @@
             border-radius: 50px; margin-top: 16px; font-weight: 600;
         }
 
-        /* ========== SIMULADOR ========== */
+        /* SIMULADOR */
         .simulator { background: var(--primary-blue); color: var(--white); position: relative; overflow: hidden; }
-        .simulator::before {
-            content: ''; position: absolute; inset: 0;
-            background: radial-gradient(ellipse at 30% 20%, rgba(197, 160, 89, 0.15), transparent 50%),
-                        radial-gradient(ellipse at 70% 80%, rgba(19, 51, 92, 0.8), transparent 60%);
-            pointer-events: none;
-        }
+        .simulator::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(197, 160, 89, 0.15), transparent 50%), radial-gradient(ellipse at 70% 80%, rgba(19, 51, 92, 0.8), transparent 60%); pointer-events: none; }
         .simulator .container { position: relative; z-index: 2; }
         .simulator .section-header h2 { color: var(--white); }
         .simulator .section-header p { color: #CBD5E1; }
@@ -527,8 +406,7 @@
             display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px;
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(197, 160, 89, 0.2);
-            border-radius: 24px; padding: 44px;
-            backdrop-filter: blur(10px);
+            border-radius: 24px; padding: 44px; backdrop-filter: blur(10px);
         }
         .sim-steps { display: flex; gap: 12px; margin-bottom: 32px; flex-wrap: wrap; }
         .sim-step {
@@ -536,15 +414,13 @@
             padding: 8px 16px; border-radius: 50px;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 12px; color: #94A3B8;
-            transition: all 0.4s var(--transition-smooth);
+            font-size: 12px; color: #94A3B8; transition: all 0.4s var(--transition-smooth);
         }
         .sim-step-num {
             width: 22px; height: 22px; border-radius: 50%;
             background: rgba(197, 160, 89, 0.2); color: var(--accent-gold);
             display: flex; align-items: center; justify-content: center;
-            font-size: 11px; font-weight: 700;
-            transition: all 0.4s ease;
+            font-size: 11px; font-weight: 700; transition: all 0.4s ease;
         }
         .sim-step.active { background: rgba(197, 160, 89, 0.15); border-color: var(--accent-gold); color: var(--white); }
         .sim-step.active .sim-step-num { background: var(--accent-gold); color: var(--primary-blue); box-shadow: 0 0 15px rgba(197, 160, 89, 0.6); }
@@ -575,11 +451,7 @@
         .sim-option-text strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 2px; }
         .sim-option-text span { font-size: 11px; color: #94A3B8; }
         .sim-input-group { margin-bottom: 18px; }
-        .sim-input-group label {
-            display: block; font-size: 12px; font-weight: 600;
-            color: var(--accent-gold); margin-bottom: 8px;
-            text-transform: uppercase; letter-spacing: 1px;
-        }
+        .sim-input-group label { display: block; font-size: 12px; font-weight: 600; color: var(--accent-gold); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
         .sim-input {
             width: 100%; padding: 14px 18px; border-radius: 12px;
             background: rgba(255, 255, 255, 0.05);
@@ -587,8 +459,7 @@
             color: var(--white); font-size: 15px; font-family: inherit;
             transition: all 0.3s ease;
         }
-        .sim-input:focus { outline: none; border-color: var(--accent-gold); background: rgba(197, 160, 89, 0.05); box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15); }
-        .sim-input::placeholder { color: #64748B; }
+        .sim-input:focus { outline: none; border-color: var(--accent-gold); background: rgba(197, 160, 89, 0.05); }
         .sim-slider-wrapper { padding: 12px 0; }
         .sim-slider {
             width: 100%; -webkit-appearance: none; appearance: none;
@@ -605,7 +476,6 @@
         .sim-slider::-moz-range-thumb {
             width: 22px; height: 22px; border-radius: 50%;
             background: var(--gradient-gold); cursor: none; border: none;
-            box-shadow: 0 0 15px rgba(197, 160, 89, 0.6);
         }
         .sim-slider-value { display: flex; justify-content: space-between; margin-top: 12px; font-size: 12px; color: #94A3B8; }
         .sim-slider-current { color: var(--accent-gold); font-weight: 700; font-size: 16px; }
@@ -638,8 +508,7 @@
             font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 800;
             background: var(--gradient-gold);
             -webkit-background-clip: text; background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1;
+            -webkit-text-fill-color: transparent; line-height: 1;
         }
         .sim-estimate-price-period { font-size: 14px; color: #94A3B8; margin-top: 8px; }
         .sim-estimate-divider { height: 1px; background: linear-gradient(to right, rgba(197, 160, 89, 0.3), transparent); margin: 24px 0; }
@@ -649,17 +518,13 @@
         .sim-estimate-row span:last-child { color: var(--white); font-weight: 600; }
         .sim-estimate-cta { width: 100%; }
 
-        /* ========== LOTTIE ANIMATIONS ========== */
-        .lottie-icon { width: 80px; height: 80px; margin: 0 auto; }
-
-        /* ========== TESTEMUNHOS ========== */
+        /* TESTEMUNHOS */
         .testimonials { background: var(--white); }
         .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
         .testimonial-card {
-            background: var(--bg-ivory); padding: 36px;
-            border-radius: 20px; border: 1px solid rgba(197, 160, 89, 0.15);
-            position: relative; transition: all 0.5s var(--transition-smooth);
-            cursor: none;
+            background: var(--bg-ivory); padding: 36px; border-radius: 20px;
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            position: relative; transition: all 0.5s var(--transition-smooth); cursor: none;
         }
         .testimonial-card:hover { transform: translateY(-6px); box-shadow: var(--card-shadow-hover); border-color: rgba(197, 160, 89, 0.35); }
         .testimonial-quote-mark {
@@ -681,14 +546,13 @@
         [data-theme="dark"] .testimonial-info strong { color: #E2E8F0; }
         .testimonial-info span { font-size: 12px; color: var(--text-muted); }
 
-        /* ========== SOBRE ========== */
+        /* SOBRE */
         .about { background: var(--bg-ivory); position: relative; overflow: hidden; }
         .about-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
         .about-text p { margin-bottom: 20px; font-size: 16px; color: var(--text-dark); text-align: justify; line-height: 1.8; }
         .values-list { margin-top: 36px; display: flex; flex-direction: column; gap: 16px; }
         .value-card {
-            display: flex; gap: 18px;
-            background: var(--white); padding: 22px 24px;
+            display: flex; gap: 18px; background: var(--white); padding: 22px 24px;
             border-radius: 14px; border-left: 3px solid var(--accent-gold);
             transition: all 0.4s var(--transition-smooth);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
@@ -706,12 +570,12 @@
             position: relative; overflow: hidden;
         }
         .mission-box-label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 16px; font-weight: 600; }
-        .mission-box q { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; font-style: italic; display: block; color: var(--white); line-height: 1.3; position: relative; z-index: 2; }
+        .mission-box q { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; font-style: italic; display: block; color: var(--white); line-height: 1.3; }
         .about-visual { display: flex; flex-direction: column; align-items: center; gap: 40px; }
         .about-shield { animation: shieldFloat 4s ease-in-out infinite; filter: drop-shadow(0 20px 40px rgba(11, 37, 69, 0.2)); }
         @keyframes shieldFloat { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-15px) rotate(2deg); } }
 
-        /* ========== FAQ ========== */
+        /* FAQ */
         .faq { background: var(--white); }
         .faq-list { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px; }
         .faq-item {
@@ -740,7 +604,7 @@
         .faq-item[open] summary::after { transform: rotate(135deg); background: var(--accent-gold); color: var(--white); }
         .faq-item p { padding: 0 28px 24px 28px; color: var(--text-muted); font-size: 15px; line-height: 1.75; animation: fadeInUp 0.4s ease; }
 
-        /* ========== CONTACTO ========== */
+        /* CONTACTO */
         .contact { background: var(--bg-ivory); }
         .contact-layout { display: grid; grid-template-columns: 1.2fr 0.9fr; gap: 50px; }
         .contact-form-container {
@@ -791,8 +655,7 @@
             display: none; background: linear-gradient(135deg, #DCFCE7, #BBF7D0);
             border: 1px solid #86EFAC; color: #166534;
             padding: 18px; border-radius: 12px;
-            margin-bottom: 24px; font-size: 14px; font-weight: 500;
-            text-align: center;
+            margin-bottom: 24px; font-size: 14px; font-weight: 500; text-align: center;
         }
         .success-overlay.show { display: block; animation: fadeInUp 0.4s ease; }
         .error-overlay {
@@ -820,7 +683,7 @@
         .info-link { color: var(--text-dark); text-decoration: none; font-size: 15px; transition: all 0.3s ease; display: block; cursor: none; }
         .info-link:hover { color: var(--accent-gold); transform: translateX(4px); }
 
-        /* ========== FOOTER ========== */
+        /* FOOTER */
         footer { background: #061529; color: #94A3B8; padding: 70px 0 30px 0; position: relative; overflow: hidden; }
         footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--gradient-gold); }
         .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
@@ -842,8 +705,7 @@
             background: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px; color: #94A3B8;
-            text-decoration: none; transition: all 0.4s var(--transition-smooth);
-            cursor: none;
+            text-decoration: none; transition: all 0.4s var(--transition-smooth); cursor: none;
         }
         .social-btn:hover { background: var(--gradient-gold); border-color: var(--accent-gold); color: var(--primary-blue); transform: translateY(-4px) rotate(-8deg); }
         .social-icon { width: 18px; height: 18px; }
@@ -854,7 +716,7 @@
         }
         .footer-bottom a { color: var(--accent-gold); text-decoration: none; cursor: none; }
 
-        /* ========== FLUTUANTES ========== */
+        /* FLUTUANTES */
         .whatsapp-float {
             position: fixed; bottom: 25px; right: 25px;
             width: 62px; height: 62px; background: var(--whatsapp);
@@ -889,26 +751,13 @@
             display: flex; align-items: center; justify-content: center;
             cursor: none; opacity: 0; visibility: hidden;
             transform: translateY(20px);
-            transition: all 0.4s var(--transition-smooth);
-            z-index: 998;
+            transition: all 0.4s var(--transition-smooth); z-index: 998;
         }
         .back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
         .back-to-top:hover { background: var(--accent-gold); color: var(--primary-blue); box-shadow: var(--glow-gold); }
         .back-to-top svg { width: 20px; height: 20px; }
-        .pwa-install-btn {
-            position: fixed; bottom: 170px; right: 90px;
-            padding: 10px 18px; background: var(--gradient-gold);
-            color: var(--primary-blue); border: none;
-            border-radius: 50px; font-size: 12px; font-weight: 600;
-            cursor: none; z-index: 998;
-            display: none; align-items: center; gap: 6px;
-            box-shadow: 0 10px 25px -8px rgba(197, 160, 89, 0.5);
-            transition: all 0.4s var(--transition-smooth);
-        }
-        .pwa-install-btn.show { display: inline-flex; }
-        .pwa-install-btn:hover { transform: translateY(-3px); }
 
-        /* ========== RESPONSIVO ========== */
+        /* RESPONSIVO */
         @media (max-width: 992px) {
             .simulator-wrapper { grid-template-columns: 1fr; padding: 32px; }
             .about-layout, .contact-layout { grid-template-columns: 1fr; gap: 40px; }
@@ -939,19 +788,13 @@
             .sim-steps { flex-wrap: wrap; gap: 8px; }
             .sim-step { font-size: 11px; padding: 6px 12px; }
             .contact-form-container { padding: 32px 24px; }
-            .whatsapp-float { display: flex; width: 56px; height: 56px; }
-            .chat-float { display: flex; bottom: 95px; width: 50px; height: 50px; }
-            .back-to-top { bottom: 155px; right: 20px; width: 44px; height: 44px; }
-            .pwa-install-btn { bottom: 155px; right: 74px; font-size: 11px; padding: 8px 14px; }
+            .whatsapp-float { width: 56px; height: 56px; }
             .footer-bottom { justify-content: center; text-align: center; }
-            .counter-inner { gap: 30px; }
-            .counter-value { font-size: 32px; }
         }
         @media (max-width: 480px) {
             .logo-text h1 { font-size: 15px; }
             .section-header h2 { font-size: 24px; }
             .sim-estimate-price-value { font-size: 36px; }
-            .voice-input-btn { top: 34px; right: 8px; width: 32px; height: 32px; }
         }
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
@@ -960,9 +803,9 @@
 </head>
 <body>
 
-    <!-- ============ LOADER ============ -->
+    <!-- LOADER -->
     <div class="loader" id="loader" aria-hidden="true">
-        <svg class="loader-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="loader-logo" viewBox="0 0 40 40" fill="none">
             <path d="M20 2C20 2 34 5 34 16C34 26 20 38 20 38C20 38 6 26 6 16C6 5 20 2 20 2Z" fill="#C5A059"/>
             <path d="M20 4C20 4 32 6.7 32 16.5C32 25.1 19.5 35.6 19.5 35.6C19.5 35.6 7 25.1 7 16.5C7 6.7 20 4 20 4Z" fill="#0B2545"/>
             <path d="M17 14 L23 12 L25 16 L21 21 L18 24 L15 19 Z" fill="#C5A059" opacity="0.85"/>
@@ -972,32 +815,32 @@
         <div class="loader-text">Protegendo o seu futuro</div>
     </div>
 
-    <!-- ============ CURSOR ============ -->
+    <!-- CURSOR -->
     <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
     <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
-    <!-- ============ SCROLL PROGRESS ============ -->
+    <!-- SCROLL PROGRESS -->
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-    <!-- ============ THEME TOGGLE ============ -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
-        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+    <!-- THEME TOGGLE -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"/>
             <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
             <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
             <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
         </svg>
-        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
     </button>
 
-    <!-- ============ HEADER ============ -->
+    <!-- HEADER -->
     <header id="mainHeader">
         <div class="header-container">
-            <a href="#inicio" class="logo-area" aria-label="CHP-Angola - Página inicial">
-                <svg class="logo-svg" width="42" height="42" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <a href="#inicio" class="logo-area" aria-label="CHP-Angola">
+                <svg class="logo-svg" width="42" height="42" viewBox="0 0 40 40" fill="none">
                     <path d="M20 2C20 2 34 5 34 16C34 26 20 38 20 38C20 38 6 26 6 16C6 5 20 2 20 2Z" fill="#C5A059"/>
                     <path d="M20 4C20 4 32 6.7 32 16.5C32 25.1 19.5 35.6 19.5 35.6C19.5 35.6 7 25.1 7 16.5C7 6.7 20 4 20 4Z" fill="#0B2545"/>
                     <path d="M17 14 L23 12 L25 16 L21 21 L18 24 L15 19 Z" fill="#C5A059" opacity="0.85"/>
@@ -1025,22 +868,11 @@
         </div>
     </header>
 
-    <!-- ============ HERO ============ -->
+    <!-- HERO -->
     <section class="hero" id="inicio">
-        <!-- Fallback gradient -->
         <div class="hero-video-fallback" aria-hidden="true"></div>
-        
-        <!-- Vídeo (descomenta quando tiveres o ficheiro) -->
-        <!-- 
-        <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
-            <source src="assets/hero-bg.mp4" type="video/mp4">
-        </video>
-        -->
-        
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-particles" id="particles" aria-hidden="true"></div>
-        
-        <!-- Canvas 3D -->
         <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
         
         <div class="hero-content">
@@ -1062,22 +894,22 @@
             <div class="hero-actions">
                 <a href="#simulador" class="btn btn-gold">
                     Simular Seguro
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
                 <a href="#contacto" class="btn btn-outline">Falar com um Consultor</a>
             </div>
             
             <div class="trust-strip">
                 <div class="trust-item">
-                    <div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
                     <div><strong>Independente</strong><span>Defendemos os seus interesses</span></div>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                    <div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
                     <div><strong>Resposta em 24h</strong><span>Análise rápida e dedicada</span></div>
                 </div>
                 <div class="trust-item">
-                    <div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                    <div class="trust-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
                     <div><strong>Conformidade Legal</strong><span>Decreto 35/09</span></div>
                 </div>
             </div>
@@ -1089,35 +921,7 @@
         </div>
     </section>
 
-    <!-- ============ COUNTER PROVA SOCIAL ============ -->
-    <section class="social-counter" aria-label="Estatísticas em tempo real">
-        <div class="counter-inner">
-            <div class="counter-item">
-                <div class="counter-value" data-counter="1250">0</div>
-                <div class="counter-label">Seguros Emitidos</div>
-            </div>
-            <div class="counter-item">
-                <div class="counter-value" data-counter="98">0</div>
-                <div class="counter-label">% Clientes Satisfeitos</div>
-            </div>
-            <div class="counter-item">
-                <div class="counter-value" data-counter="18" data-suffix="h">0</div>
-                <div class="counter-label">Tempo Médio Resposta</div>
-            </div>
-            <div class="counter-item">
-                <div class="counter-value" data-counter="5">0</div>
-                <div class="counter-label">Seguradoras Parceiras</div>
-            </div>
-            <div class="counter-item" style="display:flex; align-items:center;">
-                <div>
-                    <div class="counter-value" data-counter="3" data-live="true">0</div>
-                    <div class="counter-label">Simulações Hoje<span class="counter-live">Live</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ SERVIÇOS ============ -->
+    <!-- SERVIÇOS -->
     <section class="services" id="servicos">
         <div class="container">
             <div class="section-header reveal">
@@ -1128,7 +932,7 @@
 
             <div class="main-featured-service reveal">
                 <div class="legal-badge">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     Legislação Obrigatória · Decreto n.º 35/09
                 </div>
                 <h3 class="featured-title">Seguro de Responsabilidade Civil Automóvel</h3>
@@ -1136,19 +940,19 @@
                 
                 <div class="benefits-grid">
                     <div class="benefit-item">
-                        <div class="benefit-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="benefit-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
                         <div class="benefit-text"><h4>Cumprimento Legal Imediato</h4><p>Evite coimas elevadas, apreensão de documentos ou impedimentos de circulação.</p></div>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="benefit-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
                         <div class="benefit-text"><h4>Proteção Financeira Real</h4><p>Cobertura integral de indemnizações devidas a terceiros por danos.</p></div>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="benefit-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
                         <div class="benefit-text"><h4>Mediação Sem Complicações</h4><p>Assumimos toda a carga burocrática junto da seguradora.</p></div>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        <div class="benefit-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
                         <div class="benefit-text"><h4>Assistência em Viagem</h4><p>Reboque nacional e assistência logística 24/7.</p></div>
                     </div>
                 </div>
@@ -1156,20 +960,20 @@
 
             <h3 class="future-services-title reveal">Porque a vida não se move apenas sobre quatro rodas, estamos a preparar o seu amanhã:</h3>
             <div class="services-grid">
-                <div class="service-card reveal reveal-delay-1">
-                    <div class="service-card-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                <div class="service-card reveal">
+                    <div class="service-card-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
                     <h3>Seguro de Saúde</h3>
                     <p>Acesso garantido às melhores clínicas e redes hospitalares para cuidar de si, da sua família ou dos seus colaboradores.</p>
                     <span class="service-badge">Em breve</span>
                 </div>
-                <div class="service-card reveal reveal-delay-2">
-                    <div class="service-card-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+                <div class="service-card reveal">
+                    <div class="service-card-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
                     <h3>Seguro de Vida</h3>
                     <p>A maior prova de amor e estabilidade financeira que pode deixar estruturada para quem mais depende de si.</p>
                     <span class="service-badge">Em breve</span>
                 </div>
-                <div class="service-card reveal reveal-delay-3">
-                    <div class="service-card-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <div class="service-card reveal">
+                    <div class="service-card-icon-wrapper"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
                     <h3>Património & Agricultura</h3>
                     <p>Proteção completa para habitações, escritórios, frotas corporativas, produções e colheitas.</p>
                     <span class="service-badge">Em breve</span>
@@ -1178,7 +982,7 @@
         </div>
     </section>
 
-    <!-- ============ SIMULADOR ============ -->
+    <!-- SIMULADOR -->
     <section class="simulator" id="simulador">
         <div class="container">
             <div class="section-header reveal">
@@ -1189,7 +993,7 @@
 
             <div class="simulator-wrapper reveal" id="simulator-wrapper">
                 <div class="sim-form">
-                    <div class="sim-steps" aria-label="Progresso do simulador">
+                    <div class="sim-steps" aria-label="Progresso">
                         <div class="sim-step active" data-step="1"><div class="sim-step-num">1</div>Tipo de Veículo</div>
                         <div class="sim-step" data-step="2"><div class="sim-step-num">2</div>Idade do Condutor</div>
                         <div class="sim-step" data-step="3"><div class="sim-step-num">3</div>Cobertura</div>
@@ -1234,14 +1038,14 @@
                                 </div>
                             </div>
                             <div class="sim-input-group">
-                                <label for="experience">Anos de Carta de Condução</label>
-                                <input type="number" id="experience" class="sim-input" min="0" max="60" value="10" placeholder="Ex: 10">
+                                <label for="experience">Anos de Carta</label>
+                                <input type="number" id="experience" class="sim-input" min="0" max="60" value="10">
                             </div>
                         </div>
 
                         <div class="sim-panel" data-panel="3">
                             <h3>Que nível de cobertura pretende?</h3>
-                            <p>Escolha a proteção que melhor se ajusta às suas necessidades.</p>
+                            <p>Escolha a proteção que melhor se ajusta.</p>
                             <div class="sim-options" data-question="coverage" style="grid-template-columns: 1fr;">
                                 <button type="button" class="sim-option" data-value="base" data-multiplier="1">
                                     <div class="sim-option-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -1253,7 +1057,7 @@
                                 </button>
                                 <button type="button" class="sim-option" data-value="premium" data-multiplier="2.4">
                                     <div class="sim-option-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12l3-7h14l3 7"/><path d="M2 12v7h20v-7"/><circle cx="12" cy="16" r="1.5"/></svg></div>
-                                    <div class="sim-option-text"><strong>Premium (Todas as Coberturas)</strong><span>Proteção máxima + assistência 24h</span></div>
+                                    <div class="sim-option-text"><strong>Premium</strong><span>Proteção máxima + assistência 24h</span></div>
                                 </button>
                             </div>
                         </div>
@@ -1271,7 +1075,7 @@
                     </div>
                 </div>
 
-                <aside class="sim-estimate" aria-live="polite">
+                <aside class="sim-estimate">
                     <div>
                         <div class="sim-estimate-label">Estimativa Mensal</div>
                         <h3>A Sua Proteção Personalizada</h3>
@@ -1295,16 +1099,16 @@
         </div>
     </section>
 
-    <!-- ============ TESTEMUNHOS ============ -->
-    <section class="testimonials" aria-labelledby="testimonials-title">
+    <!-- TESTEMUNHOS -->
+    <section class="testimonials">
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-label">Testemunhos</span>
-                <h2 id="testimonials-title">Quem Confia na CHP-Angola</h2>
+                <h2>Quem Confia na CHP-Angola</h2>
                 <p>A satisfação de quem já protege o seu caminho connosco.</p>
             </div>
             <div class="testimonials-grid">
-                <article class="testimonial-card reveal reveal-delay-1">
+                <article class="testimonial-card reveal">
                     <span class="testimonial-quote-mark" aria-hidden="true">"</span>
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">Tratei do seguro do meu carro num só dia. A equipa explicou-me tudo com paciência e clareza.</p>
@@ -1313,7 +1117,7 @@
                         <div class="testimonial-info"><strong>João Manuel</strong><span>Luanda</span></div>
                     </div>
                 </article>
-                <article class="testimonial-card reveal reveal-delay-2">
+                <article class="testimonial-card reveal">
                     <span class="testimonial-quote-mark" aria-hidden="true">"</span>
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">Tive um acidente e a CHP-Angola tratou de toda a burocracia. Rápido e próximo.</p>
@@ -1322,7 +1126,7 @@
                         <div class="testimonial-info"><strong>Ana Silva</strong><span>Benguela</span></div>
                     </div>
                 </article>
-                <article class="testimonial-card reveal reveal-delay-3">
+                <article class="testimonial-card reveal">
                     <span class="testimonial-quote-mark" aria-hidden="true">"</span>
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">Como empresário, precisava de cobrir a minha frota. Apresentaram várias opções comparadas.</p>
@@ -1335,7 +1139,7 @@
         </div>
     </section>
 
-    <!-- ============ SOBRE ============ -->
+    <!-- SOBRE -->
     <section class="about" id="sobre">
         <div class="container">
             <div class="section-header reveal">
@@ -1370,13 +1174,13 @@
                         <div class="mission-box-label">A Nossa Missão</div>
                         <q>Protegendo o seu Futuro!</q>
                     </div>
-                    <div id="lottie-shield" class="lottie-icon" aria-hidden="true" style="width: 200px; height: 200px;"></div>
+                    <div id="lottie-shield" aria-hidden="true" style="width: 200px; height: 200px;"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ FAQ ============ -->
+    <!-- FAQ -->
     <section class="faq" id="faq">
         <div class="container">
             <div class="section-header reveal">
@@ -1413,7 +1217,7 @@
         </div>
     </section>
 
-    <!-- ============ CONTACTO ============ -->
+    <!-- CONTACTO -->
     <section class="contact" id="contacto">
         <div class="container">
             <div class="section-header reveal">
@@ -1425,27 +1229,32 @@
             <div class="contact-layout">
                 <div class="contact-form-container reveal">
                     <div class="success-overlay" id="success-message" role="status" aria-live="polite">
-                        ✓ Mensagem enviada com sucesso! A equipa da CHP-Angola entrará em contacto muito em breve.
+                        ✓ Mensagem enviada com sucesso! Entraremos em contacto em breve.
                     </div>
                     <div class="error-overlay" id="error-message" role="alert" aria-live="assertive">
-                        ✕ Ocorreu um erro ao enviar. Por favor tente novamente ou contacte-nos por WhatsApp.
+                        ✕ Ocorreu um erro ao enviar. Tente novamente ou contacte-nos por WhatsApp.
                     </div>
                     
                     <h3>Pedido de Simulação Gratuita</h3>
                     <p>Preencha os dados e receba uma análise comparativa em menos de 24 horas.</p>
                     
+                    <!-- ⚠️ SUBSTITUIR SEU_ID_AQUI pelo ID do Formspree -->
                     <form id="lead-form" action="https://formspree.io/f/SEU_ID_AQUI" method="POST" novalidate>
+                        <input type="hidden" name="_subject" value="🛡️ Novo pedido — CHP-Angola">
+                        <input type="hidden" name="_language" value="pt">
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                        
                         <div class="form-group">
                             <label for="name">Nome Completo <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Ex: João Manuel" required autocomplete="name" minlength="3">
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Ex: João Manuel" required minlength="3">
                         </div>
                         <div class="form-group">
                             <label for="phone">Telemóvel / WhatsApp <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Ex: 927 635 370" pattern="9[0-9]{2}\s?[0-9]{3}\s?[0-9]{3}" required autocomplete="tel">
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Ex: 927 635 370" pattern="9[0-9]{2}\s?[0-9]{3}\s?[0-9]{3}" required>
                         </div>
                         <div class="form-group">
                             <label for="email">E-mail <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Ex: joao.manuel@email.com" required autocomplete="email">
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Ex: joao@email.com" required>
                         </div>
                         <div class="form-group">
                             <label for="insurance-type">Tipo de Seguro <span class="required">*</span></label>
@@ -1462,9 +1271,9 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Mensagem / Detalhes <span class="required">*</span></label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Indique a marca, modelo ou ano da sua viatura ou descreva as suas necessidades..." required minlength="10"></textarea>
-                            <button type="button" class="voice-input-btn" id="voiceInputBtn" title="Ditar por voz" aria-label="Ditar mensagem por voz">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <textarea id="message" name="message" class="form-control" placeholder="Indique a marca, modelo ou ano da sua viatura..." required minlength="10"></textarea>
+                            <button type="button" class="voice-input-btn" id="voiceInputBtn" title="Ditar por voz" aria-label="Ditar por voz">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
                                     <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
                                     <line x1="12" y1="19" x2="12" y2="23"/>
@@ -1474,7 +1283,7 @@
                         </div>
                         <div class="checkbox-group">
                             <input type="checkbox" id="privacy" name="privacy" required>
-                            <label for="privacy">Autorizo o tratamento dos meus dados nos termos da <a href="privacidade.html">Política de Privacidade</a>. <span class="required">*</span></label>
+                            <label for="privacy">Autorizo o tratamento dos meus dados nos termos da <a href="./privacidade.html">Política de Privacidade</a>. <span class="required">*</span></label>
                         </div>
                         <button type="submit" class="btn btn-gold" id="submit-btn" style="width: 100%;">
                             Enviar Mensagem
@@ -1515,7 +1324,7 @@
         </div>
     </section>
 
-    <!-- ============ FOOTER ============ -->
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -1546,21 +1355,21 @@
                         <a href="https://www.instagram.com/chpangola" class="social-btn" title="Instagram" target="_blank" rel="noopener" aria-label="Instagram">
                             <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                         </a>
-                        <a href="https://wa.me/244927635370" class="social-btn" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp">
-                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                        <a href="https://wa.me/244929202707" class="social-btn" title="WhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp">
+                            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M20.52 3.449C12.831-3.984.106 1.407.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.9 11.9 0 0 0 5.71 1.457h.005c9.89 0 15.99-11.96 9.47-18.356z"/></svg>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; <span id="year">2026</span> CHP-Angola Corretores de Seguros.</p>
-                <p><a href="privacidade.html">Política de Privacidade</a></p>
+                <p><a href="./privacidade.html">Política de Privacidade</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- ============ FLUTUANTES ============ -->
-    <a href="https://wa.me/244927635370?text=Ol%C3%A1%2C%20gostaria%20de%20simular%20um%20seguro." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar via WhatsApp">
+    <!-- FLUTUANTES -->
+    <a href="https://wa.me/244929202707?text=Ol%C3%A1%2C%20gostaria%20de%20simular%20um%20seguro." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar via WhatsApp">
         <svg viewBox="0 0 24 24">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
             <path d="M20.52 3.449C12.831-3.984.106 1.407.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.9 11.9 0 0 0 5.71 1.457h.005c9.89 0 15.99-11.96 9.47-18.356z"/>
@@ -1571,26 +1380,21 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
     </button>
 
-    <button class="pwa-install-btn" id="pwaInstallBtn" aria-label="Instalar aplicação">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Instalar App
-    </button>
-
     <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
 
-    <!-- ============ CHATBOT WIDGET ============ -->
+    <!-- CHATBOT -->
     <div id="chatbot-container" style="display:none; position: fixed; bottom: 170px; right: 25px; width: 360px; height: 520px; z-index: 10000; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.4); border: 1px solid rgba(197, 160, 89, 0.3);">
-        <iframe src="chatbot.html" style="width: 100%; height: 100%; border: none;" title="Chatbot CHP-Angola"></iframe>
+        <iframe src="./chatbot.html" style="width: 100%; height: 100%; border: none;" title="Chatbot"></iframe>
     </div>
 
-    <!-- ============ SCRIPT ============ -->
+    <!-- SCRIPT -->
     <script>
     (function() {
         'use strict';
 
-        // ==================== THEME TOGGLE ====================
+        // ============ THEME ============
         const themeToggle = document.getElementById('themeToggle');
         const savedTheme = localStorage.getItem('chp-theme') || 
                           (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -1603,12 +1407,12 @@
             localStorage.setItem('chp-theme', next);
         });
 
-        // ==================== LOADER ====================
+        // ============ LOADER ============
         window.addEventListener('load', () => {
             setTimeout(() => document.getElementById('loader').classList.add('hidden'), 900);
         });
 
-        // ==================== CURSOR ====================
+        // ============ CURSOR ============
         const cursorDot = document.getElementById('cursorDot');
         const cursorRing = document.getElementById('cursorRing');
         let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
@@ -1634,26 +1438,26 @@
             document.addEventListener('mouseup', () => cursorRing.classList.remove('click'));
         }
 
-        // ==================== SCROLL PROGRESS ====================
+        // ============ SCROLL PROGRESS ============
         window.addEventListener('scroll', () => {
             const h = document.documentElement.scrollHeight - window.innerHeight;
             document.getElementById('scrollProgress').style.width = (window.scrollY / h) * 100 + '%';
         }, { passive: true });
 
-        // ==================== HEADER SCROLL ====================
+        // ============ HEADER ============
         const header = document.getElementById('mainHeader');
         window.addEventListener('scroll', () => {
             header.classList.toggle('scrolled', window.scrollY > 50);
         }, { passive: true });
 
-        // ==================== MOBILE MENU ====================
+        // ============ MOBILE MENU ============
         const menuToggle = document.getElementById('menuToggle');
         const menuCheckbox = document.getElementById('mobile-menu-checkbox');
         menuToggle.addEventListener('click', () => {
             setTimeout(() => menuToggle.classList.toggle('active', menuCheckbox.checked), 10);
         });
 
-        // ==================== PARTICLES ====================
+        // ============ PARTICLES ============
         const particlesContainer = document.getElementById('particles');
         if (particlesContainer) {
             const count = window.innerWidth < 768 ? 15 : 35;
@@ -1672,74 +1476,42 @@
             }
         }
 
-        // ==================== THREE.JS 3D SHIELD ====================
+        // ============ THREE.JS ============
         function initThreeJS() {
             if (typeof THREE === 'undefined' || window.innerWidth < 992) return;
             const canvas = document.getElementById('heroCanvas');
             if (!canvas) return;
-
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
             camera.position.z = 5;
-
             const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
             renderer.setSize(400, 400);
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-            // Esfera de partículas douradas
             const particlesGeo = new THREE.BufferGeometry();
             const particleCount = 800;
             const positions = new Float32Array(particleCount * 3);
             const colors = new Float32Array(particleCount * 3);
-
             for (let i = 0; i < particleCount; i++) {
                 const radius = 2;
                 const theta = Math.random() * Math.PI * 2;
                 const phi = Math.acos(Math.random() * 2 - 1);
-                
                 positions[i * 3] = radius * Math.sin(phi) * Math.cos(theta);
                 positions[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
                 positions[i * 3 + 2] = radius * Math.cos(phi);
-
                 const color = new THREE.Color(0xC5A059);
-                const t = Math.random();
-                colors[i * 3] = color.r * (0.5 + t * 0.5);
-                colors[i * 3 + 1] = color.g * (0.5 + t * 0.5);
-                colors[i * 3 + 2] = color.b * (0.5 + t * 0.5);
+                colors[i * 3] = color.r; colors[i * 3 + 1] = color.g; colors[i * 3 + 2] = color.b;
             }
-
             particlesGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
             particlesGeo.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
-            const particlesMat = new THREE.PointsMaterial({
-                size: 0.05,
-                vertexColors: true,
-                transparent: true,
-                opacity: 0.9,
-                blending: THREE.AdditiveBlending,
-                depthWrite: false
-            });
-
+            const particlesMat = new THREE.PointsMaterial({ size: 0.05, vertexColors: true, transparent: true, opacity: 0.9, blending: THREE.AdditiveBlending, depthWrite: false });
             const points = new THREE.Points(particlesGeo, particlesMat);
             scene.add(points);
 
-            // Icosaedro wireframe
             const icoGeo = new THREE.IcosahedronGeometry(2.2, 1);
-            const icoMat = new THREE.MeshBasicMaterial({
-                color: 0xC5A059,
-                wireframe: true,
-                transparent: true,
-                opacity: 0.15
-            });
+            const icoMat = new THREE.MeshBasicMaterial({ color: 0xC5A059, wireframe: true, transparent: true, opacity: 0.15 });
             const ico = new THREE.Mesh(icoGeo, icoMat);
             scene.add(ico);
-
-            // Anel externo
-            const ringGeo = new THREE.TorusGeometry(2.8, 0.01, 16, 100);
-            const ringMat = new THREE.MeshBasicMaterial({ color: 0xC5A059, transparent: true, opacity: 0.4 });
-            const ring = new THREE.Mesh(ringGeo, ringMat);
-            ring.rotation.x = Math.PI / 2;
-            scene.add(ring);
 
             function animate() {
                 requestAnimationFrame(animate);
@@ -1747,124 +1519,43 @@
                 points.rotation.y = t;
                 points.rotation.x = t * 0.5;
                 ico.rotation.y = -t * 0.7;
-                ico.rotation.x = t * 0.4;
-                ring.rotation.z = t * 0.8;
                 renderer.render(scene, camera);
             }
             animate();
         }
         window.addEventListener('load', initThreeJS);
 
-        // ==================== LOTTIE SHIELD ====================
-        function initLottie() {
-            if (typeof lottie === 'undefined') return;
-            // Animação Lottie inline (shield pulse)
-            const container = document.getElementById('lottie-shield');
-            if (!container) return;
-            // Fallback SVG animado se Lottie falhar
-            container.innerHTML = `
-                <svg viewBox="0 0 200 200" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" stop-color="#C5A059" stop-opacity="0.4"/>
-                            <stop offset="100%" stop-color="#C5A059" stop-opacity="0"/>
-                        </radialGradient>
-                    </defs>
-                    <circle cx="100" cy="100" r="90" fill="url(#glow)">
-                        <animate attributeName="r" values="80;95;80" dur="3s" repeatCount="indefinite"/>
-                    </circle>
-                    <circle cx="100" cy="100" r="80" fill="none" stroke="#C5A059" stroke-width="0.8" stroke-dasharray="2 3">
-                        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="30s" repeatCount="indefinite"/>
-                    </circle>
-                    <path d="M100 40 L152 60 L152 110 C152 145 100 165 100 165 C100 165 48 145 48 110 L48 60 Z" fill="#0B2545" stroke="#C5A059" stroke-width="1"/>
-                    <path d="M82 105 L94 117 L120 88" stroke="#C5A059" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
-                        <animate attributeName="stroke-dasharray" values="0 100;60 100" dur="2s" repeatCount="indefinite"/>
-                    </path>
-                </svg>
-            `;
-        }
-        window.addEventListener('load', initLottie);
-
-        // ==================== REVEAL ====================
+        // ============ REVEAL ============
         const revealElements = document.querySelectorAll('.reveal');
         if ('IntersectionObserver' in window) {
-            const revealObserver = new IntersectionObserver((entries) => {
+            const obs = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        revealObserver.unobserve(entry.target);
+                        obs.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-            revealElements.forEach(el => revealObserver.observe(el));
-        } else {
-            revealElements.forEach(el => el.classList.add('visible'));
+            }, { threshold: 0.12 });
+            revealElements.forEach(el => obs.observe(el));
         }
 
-        // ==================== NAV ACTIVE ====================
+        // ============ NAV ACTIVE ============
         const navLinks = document.querySelectorAll('nav a:not(.nav-cta)');
         const sections = document.querySelectorAll('section[id]');
         if ('IntersectionObserver' in window) {
-            const sectionObserver = new IntersectionObserver((entries) => {
+            const sObs = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const id = entry.target.id;
                         navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + id));
                     }
                 });
-            }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
-            sections.forEach(s => sectionObserver.observe(s));
+            }, { rootMargin: '-45% 0px -50% 0px' });
+            sections.forEach(s => sObs.observe(s));
         }
 
-        // ==================== COUNTERS ====================
-        const counters = document.querySelectorAll('[data-counter]');
-        let countersStarted = false;
-        function animateCounter(el, target, suffix = '') {
-            const duration = 2000;
-            const start = performance.now();
-            function update(now) {
-                const progress = Math.min((now - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                const current = Math.floor(target * eased);
-                el.textContent = current.toLocaleString('pt-AO') + suffix;
-                if (progress < 1) requestAnimationFrame(update);
-            }
-            requestAnimationFrame(update);
-        }
-
-        if ('IntersectionObserver' in window) {
-            const counterObs = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !countersStarted) {
-                        countersStarted = true;
-                        counters.forEach(el => {
-                            const target = parseInt(el.dataset.counter);
-                            const suffix = el.dataset.suffix || '';
-                            animateCounter(el, target, suffix);
-                        });
-                    }
-                });
-            }, { threshold: 0.3 });
-            const sc = document.querySelector('.social-counter');
-            if (sc) counterObs.observe(sc);
-        }
-
-        // Live counter simulation (simula atividade)
-        setInterval(() => {
-            const liveEl = document.querySelector('[data-live="true"]');
-            if (liveEl && countersStarted) {
-                const current = parseInt(liveEl.textContent) || 3;
-                liveEl.textContent = current + 1;
-            }
-        }, 45000);
-
-        // ==================== SIMULADOR ====================
-        const simState = {
-            step: 1, vehicle: null, vehicleMultiplier: 0, vehicleLabel: '',
-            age: 35, experience: 10,
-            coverage: null, coverageMultiplier: 0, coverageLabel: ''
-        };
-
+        // ============ SIMULADOR ============
+        const simState = { step: 1, vehicle: null, vehicleMultiplier: 0, vehicleLabel: '', age: 35, experience: 10, coverage: null, coverageMultiplier: 0, coverageLabel: '' };
         const simPanels = document.querySelectorAll('.sim-panel');
         const simSteps = document.querySelectorAll('.sim-step');
         const simNextBtn = document.getElementById('simNext');
@@ -1886,9 +1577,7 @@
                 s.classList.toggle('completed', sn < step);
             });
             simBackBtn.style.display = step > 1 ? 'inline-flex' : 'none';
-            simNextBtn.innerHTML = step === 3 
-                ? 'Ver Proposta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg>'
-                : 'Próximo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg>';
+            simNextBtn.innerHTML = step === 3 ? 'Ver Proposta' : 'Próximo';
             validateStep();
         }
 
@@ -1974,45 +1663,31 @@
                 if (insuranceType) insuranceType.value = 'automovel';
                 const messageField = document.getElementById('message');
                 if (messageField && !messageField.value) {
-                    messageField.value = `Olá! Simulei o meu seguro automóvel: ${simState.vehicleLabel}, condutor de ${simState.age} anos, cobertura ${simState.coverageLabel}. Estimativa: ${estimateValue.textContent}/mês. Gostaria de receber uma proposta oficial.`;
+                    messageField.value = `Simulei: ${simState.vehicleLabel}, ${simState.age} anos, cobertura ${simState.coverageLabel}. Estimativa: ${estimateValue.textContent}/mês.`;
                 }
                 document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
             }
         });
         simBackBtn.addEventListener('click', () => { if (simState.step > 1) goToStep(simState.step - 1); });
 
-        // ==================== VOICE INPUT ====================
+        // ============ VOICE INPUT ============
         const voiceBtn = document.getElementById('voiceInputBtn');
         const messageField = document.getElementById('message');
         if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
             const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
             const recognition = new SR();
             recognition.lang = 'pt-PT';
-            recognition.continuous = false;
-            recognition.interimResults = false;
-
             voiceBtn.addEventListener('click', () => {
-                if (voiceBtn.classList.contains('recording')) {
-                    recognition.stop();
-                    return;
-                }
-                try {
-                    recognition.start();
-                    voiceBtn.classList.add('recording');
-                } catch (e) { console.warn('Voice error:', e); }
+                if (voiceBtn.classList.contains('recording')) { recognition.stop(); return; }
+                try { recognition.start(); voiceBtn.classList.add('recording'); } catch (e) {}
             });
-
             recognition.addEventListener('result', (e) => {
-                const transcript = e.results[0][0].transcript;
-                messageField.value = (messageField.value + ' ' + transcript).trim();
+                messageField.value = (messageField.value + ' ' + e.results[0][0].transcript).trim();
             });
             recognition.addEventListener('end', () => voiceBtn.classList.remove('recording'));
-            recognition.addEventListener('error', () => voiceBtn.classList.remove('recording'));
-        } else {
-            voiceBtn.style.display = 'none';
-        }
+        } else { voiceBtn.style.display = 'none'; }
 
-        // ==================== FORM ====================
+        // ============ FORM ============
         const form = document.getElementById('lead-form');
         const successMsg = document.getElementById('success-message');
         const errorMsg = document.getElementById('error-message');
@@ -2034,16 +1709,12 @@
                     });
                     if (response.ok) {
                         successMsg.classList.add('show');
-                        if (typeof gtag === 'function') {
-                            gtag('event', 'generate_lead', { event_category: 'Formulário', event_label: 'Pedido de Simulação' });
-                        }
                         form.reset();
                         successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         setTimeout(() => successMsg.classList.remove('show'), 8000);
-                    } else throw new Error('Server error');
+                    } else throw new Error('Erro');
                 } catch (err) {
                     errorMsg.classList.add('show');
-                    errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } finally {
                     submitBtn.classList.remove('btn-loading');
                     submitBtn.disabled = false;
@@ -2052,59 +1723,36 @@
             });
         }
 
-        // ==================== CHATBOT ====================
+        // ============ CHATBOT ============
         const chatFloat = document.getElementById('chatFloat');
         const chatbotContainer = document.getElementById('chatbot-container');
         let chatbotOpen = false;
         chatFloat.addEventListener('click', () => {
             chatbotOpen = !chatbotOpen;
             chatbotContainer.style.display = chatbotOpen ? 'block' : 'none';
-            if (chatbotOpen) {
-                chatbotContainer.style.animation = 'fadeInUp 0.4s ease';
-            }
         });
 
-        // ==================== PWA ====================
-        let deferredPrompt;
-        const pwaBtn = document.getElementById('pwaInstallBtn');
-        window.addEventListener('beforeinstallprompt', (e) => {
-            e.preventDefault();
-            deferredPrompt = e;
-            pwaBtn.classList.add('show');
-        });
-        pwaBtn.addEventListener('click', async () => {
-            if (!deferredPrompt) return;
-            deferredPrompt.prompt();
-            await deferredPrompt.userChoice;
-            deferredPrompt = null;
-            pwaBtn.classList.remove('show');
-        });
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('service-worker.js').catch(() => {});
-            });
-        }
-
-        // ==================== BACK TO TOP ====================
+        // ============ BACK TO TOP ============
         const backToTop = document.getElementById('back-to-top');
         window.addEventListener('scroll', () => {
             backToTop.classList.toggle('show', window.scrollY > 500);
         }, { passive: true });
         backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-        // ==================== YEAR ====================
+        // ============ YEAR ============
         const yearEl = document.getElementById('year');
         if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-        // ==================== TRACKING ====================
-        document.querySelectorAll('a[href^="https://wa.me/"], a[href^="tel:"]').forEach(el => {
-            el.addEventListener('click', function() {
-                const label = this.href.includes('wa.me') ? 'WhatsApp' : 'Telefone';
-                if (typeof gtag === 'function') gtag('event', 'contact_click', { event_category: 'Contacto', event_label: label });
+        // ============ SERVICE WORKER ============
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js', { scope: './' })
+                    .then(reg => console.log('[PWA] SW registado:', reg.scope))
+                    .catch(err => console.error('[PWA] SW erro:', err));
             });
-        });
+        }
 
-        // ==================== ESC ====================
+        // ============ ESC ============
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 if (menuCheckbox.checked) { menuCheckbox.checked = false; menuToggle.classList.remove('active'); }
