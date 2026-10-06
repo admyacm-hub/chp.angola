@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin.html
+Disallow: /api/
+Disallow: /widgets/
+
+Sitemap: https://admyacm-hub.github.io/chp.angola/sitemap.xml
+
+Crawl-delay: 1
