@@ -26,15 +26,18 @@
     
     <link rel="canonical" href="https://admyacm-hub.github.io/chp.angola/">
     
+    <!-- PWA -->
     <link rel="manifest" href="./manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="CHP-Angola">
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Cpath d='M20 2C20 2 34 5 34 16C34 26 20 38 20 38C20 38 6 26 6 16C6 5 20 2 20 2Z' fill='%23C5A059'/%3E%3Cpath d='M20 4C20 4 32 6.7 32 16.5C32 25.1 19.5 35.6 19.5 35.6C19.5 35.6 7 25.1 7 16.5C7 6.7 20 4 20 4Z' fill='%230B2545'/%3E%3C/svg%3E">
+    
+    <!-- FAVICON — Logo Oficial CHP-Angola em SVG inline -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23D4B87A'/%3E%3Cstop offset='50%25' stop-color='%23C5A059'/%3E%3Cstop offset='100%25' stop-color='%238B7040'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M50 8 C50 8 82 16 82 42 C82 68 50 92 50 92 C50 92 18 68 18 42 C18 16 50 8 50 8 Z' fill='url(%23g)'/%3E%3Cpath d='M50 14 C50 14 76 20 76 42 C76 62 50 84 50 84 C50 84 24 62 24 42 C24 20 50 14 50 14 Z' fill='%230B2545'/%3E%3Ctext x='50' y='52' text-anchor='middle' font-family='Georgia, serif' font-size='26' font-weight='bold' fill='url(%23g)'%3ECHP%3C/text%3E%3Cpath d='M40 62 L44 59 L48 60 L49 64 L46 68 L42 70 L39 66 Z' fill='%23C5A059'/%3E%3C/svg%3E">
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16.png">
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,6 +72,7 @@
     }
     </script>
     
+    <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ABC123XYZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -77,6 +81,7 @@
         gtag('config', 'G-ABC123XYZ', { anonymize_ip: true });
     </script>
     
+    <!-- Meta Pixel -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -101,6 +106,7 @@
             --primary-blue-light: #13335c;
             --accent-gold: #C5A059;
             --accent-gold-light: #D4B87A;
+            --accent-gold-dark: #8B7040;
             --accent-gold-hover: #b38f4b;
             --bg-light: #F8FAFC;
             --bg-ivory: #FBF9F4;
@@ -109,6 +115,7 @@
             --white: #FFFFFF;
             --whatsapp: #25D366;
             --gradient-gold: linear-gradient(135deg, #C5A059 0%, #E8CE8F 50%, #C5A059 100%);
+            --gradient-gold-metallic: linear-gradient(135deg, #D4B87A 0%, #C5A059 50%, #8B7040 100%);
             --gradient-blue: linear-gradient(135deg, #0B2545 0%, #13335c 100%);
             --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             --card-shadow-hover: 0 25px 50px -12px rgba(11, 37, 69, 0.25);
@@ -190,7 +197,7 @@
             transition: opacity 0.6s ease, visibility 0.6s ease;
         }
         .loader.hidden { opacity: 0; visibility: hidden; }
-        .loader-logo { width: 80px; height: 80px; animation: loaderPulse 1.6s ease-in-out infinite; }
+        .loader-logo { width: 90px; height: 90px; animation: loaderPulse 1.6s ease-in-out infinite; }
         @keyframes loaderPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); opacity: 0.85; } }
         .loader-bar { width: 200px; height: 2px; background: rgba(197, 160, 89, 0.2); border-radius: 2px; overflow: hidden; position: relative; }
         .loader-bar::after { content: ''; position: absolute; top: 0; left: -40%; height: 100%; width: 40%; background: var(--gradient-gold); border-radius: 2px; animation: loaderSlide 1.4s ease-in-out infinite; }
@@ -239,10 +246,15 @@
             transition: padding 0.4s var(--transition-smooth);
         }
         header.scrolled .header-container { padding: 10px 30px; }
-        .logo-area { display: flex; align-items: center; gap: 12px; color: var(--white); text-decoration: none; cursor: none; }
-        .logo-svg { transition: transform 0.6s var(--transition-bounce); }
-        .logo-area:hover .logo-svg { transform: rotate(360deg); }
-        .logo-text h1 { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 800; letter-spacing: 1.5px; line-height: 1.2; }
+        .logo-area { display: flex; align-items: center; gap: 14px; color: var(--white); text-decoration: none; cursor: none; }
+        .logo-svg { 
+            width: 52px;
+            height: 52px;
+            transition: transform 0.6s var(--transition-bounce);
+            filter: drop-shadow(0 4px 12px rgba(197, 160, 89, 0.25));
+        }
+        .logo-area:hover .logo-svg { transform: rotate(-5deg) scale(1.05); }
+        .logo-text h1 { font-family: 'Inter', sans-serif; font-size: 19px; font-weight: 800; letter-spacing: 1.5px; line-height: 1.2; color: var(--white); }
         .logo-text p { font-size: 10px; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 2px; font-weight: 500; }
         nav { display: flex; align-items: center; gap: 30px; }
         nav a {
@@ -681,6 +693,12 @@
         .about-visual { display: flex; flex-direction: column; align-items: center; gap: 40px; }
         .about-shield { animation: shieldFloat 4s ease-in-out infinite; filter: drop-shadow(0 20px 40px rgba(11, 37, 69, 0.2)); }
         @keyframes shieldFloat { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-15px) rotate(2deg); } }
+        .about-logo-large {
+            width: 220px;
+            height: 220px;
+            filter: drop-shadow(0 20px 40px rgba(197, 160, 89, 0.3));
+            animation: shieldFloat 4s ease-in-out infinite;
+        }
 
         /* ============ FAQ ============ */
         .faq { background: var(--white); }
@@ -805,6 +823,12 @@
         .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 50px; }
         .footer-brand h4 { color: #FFFFFF !important; font-size: 18px; margin-bottom: 18px; font-weight: 700; }
         .footer-brand p { font-size: 14px; line-height: 1.7; color: #94A3B8 !important; }
+        .footer-logo {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 18px;
+            filter: drop-shadow(0 4px 12px rgba(197, 160, 89, 0.3));
+        }
         .footer-links h4, .footer-social h4 {
             color: #FFFFFF !important; font-size: 14px; margin-bottom: 22px;
             position: relative; padding-bottom: 10px;
@@ -960,6 +984,8 @@
         @media (max-width: 768px) {
             section { padding: 70px 0; }
             .header-container { padding: 14px 20px; position: relative; }
+            .logo-svg { width: 44px; height: 44px; }
+            .logo-text h1 { font-size: 16px; }
             .menu-toggle { display: flex; }
             nav {
                 display: none; position: absolute; top: 100%; left: 0; width: 100%;
@@ -1036,9 +1062,12 @@
             .pwa-install-btn svg { width: 22px; height: 22px; }
             
             .footer-bottom { justify-content: center; text-align: center; }
+            .about-logo-large { width: 160px; height: 160px; }
         }
         @media (max-width: 480px) {
-            .logo-text h1 { font-size: 15px; }
+            .logo-text h1 { font-size: 14px; }
+            .logo-text p { font-size: 9px; }
+            .logo-svg { width: 38px; height: 38px; }
             .section-header h2 { font-size: 24px; }
             .sim-estimate-price-value { font-size: 36px; }
             .voice-input-btn { top: 34px; right: 8px; width: 32px; height: 32px; }
@@ -1052,11 +1081,19 @@
 
     <!-- LOADER -->
     <div class="loader" id="loader" aria-hidden="true">
-        <svg class="loader-logo" viewBox="0 0 40 40" fill="none">
-            <path d="M20 2C20 2 34 5 34 16C34 26 20 38 20 38C20 38 6 26 6 16C6 5 20 2 20 2Z" fill="#C5A059"/>
-            <path d="M20 4C20 4 32 6.7 32 16.5C32 25.1 19.5 35.6 19.5 35.6C19.5 35.6 7 25.1 7 16.5C7 6.7 20 4 20 4Z" fill="#0B2545"/>
-            <path d="M17 14 L23 12 L25 16 L21 21 L18 24 L15 19 Z" fill="#C5A059" opacity="0.85"/>
-            <circle cx="20" cy="17" r="1.5" fill="#FFFFFF"/>
+        <!-- Logo oficial CHP-Angola no loader -->
+        <svg class="loader-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="loaderGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#D4B87A"/>
+                    <stop offset="50%" stop-color="#C5A059"/>
+                    <stop offset="100%" stop-color="#8B7040"/>
+                </linearGradient>
+            </defs>
+            <path d="M50 6 C50 6 84 14 84 42 C84 70 50 94 50 94 C50 94 16 70 16 42 C16 14 50 6 50 6 Z" fill="url(#loaderGold)"/>
+            <path d="M50 12 C50 12 78 19 78 42 C78 64 50 86 50 86 C50 86 22 64 22 42 C22 19 50 12 50 12 Z" fill="#0B2545"/>
+            <text x="50" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="url(#loaderGold)">CHP</text>
+            <path d="M38 62 L44 58 L50 60 L51 65 L46 69 L41 71 L37 66 Z" fill="#C5A059"/>
         </svg>
         <div class="loader-bar"></div>
         <div class="loader-text">Protegendo o seu futuro</div>
@@ -1087,11 +1124,19 @@
     <header id="mainHeader">
         <div class="header-container">
             <a href="#inicio" class="logo-area" aria-label="CHP-Angola">
-                <svg class="logo-svg" width="42" height="42" viewBox="0 0 40 40" fill="none">
-                    <path d="M20 2C20 2 34 5 34 16C34 26 20 38 20 38C20 38 6 26 6 16C6 5 20 2 20 2Z" fill="#C5A059"/>
-                    <path d="M20 4C20 4 32 6.7 32 16.5C32 25.1 19.5 35.6 19.5 35.6C19.5 35.6 7 25.1 7 16.5C7 6.7 20 4 20 4Z" fill="#0B2545"/>
-                    <path d="M17 14 L23 12 L25 16 L21 21 L18 24 L15 19 Z" fill="#C5A059" opacity="0.85"/>
-                    <circle cx="20" cy="17" r="1.5" fill="#FFFFFF"/>
+                <!-- LOGO OFICIAL CHP-ANGOLA -->
+                <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="headerGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#D4B87A"/>
+                            <stop offset="50%" stop-color="#C5A059"/>
+                            <stop offset="100%" stop-color="#8B7040"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M50 6 C50 6 84 14 84 42 C84 70 50 94 50 94 C50 94 16 70 16 42 C16 14 50 6 50 6 Z" fill="url(#headerGold)"/>
+                    <path d="M50 12 C50 12 78 19 78 42 C78 64 50 86 50 86 C50 86 22 64 22 42 C22 19 50 12 50 12 Z" fill="#0B2545"/>
+                    <text x="50" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="url(#headerGold)">CHP</text>
+                    <path d="M38 62 L44 58 L50 60 L51 65 L46 69 L41 71 L37 66 Z" fill="#C5A059"/>
                 </svg>
                 <div class="logo-text">
                     <h1>CHP-ANGOLA</h1>
@@ -1436,7 +1481,21 @@
                         <div class="mission-box-label">A Nossa Missão</div>
                         <q>Protegendo o seu Futuro!</q>
                     </div>
-                    <div id="lottie-shield" aria-hidden="true" style="width: 200px; height: 200px;"></div>
+                    
+                    <!-- LOGO OFICIAL GRANDE -->
+                    <svg class="about-logo-large" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="aboutGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#D4B87A"/>
+                                <stop offset="50%" stop-color="#C5A059"/>
+                                <stop offset="100%" stop-color="#8B7040"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 6 C50 6 84 14 84 42 C84 70 50 94 50 94 C50 94 16 70 16 42 C16 14 50 6 50 6 Z" fill="url(#aboutGold)"/>
+                        <path d="M50 12 C50 12 78 19 78 42 C78 64 50 86 50 86 C50 86 22 64 22 42 C22 19 50 12 50 12 Z" fill="#0B2545"/>
+                        <text x="50" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="url(#aboutGold)">CHP</text>
+                        <path d="M38 62 L44 58 L50 60 L51 65 L46 69 L41 71 L37 66 Z" fill="#C5A059"/>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -1597,6 +1656,20 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
+                    <!-- LOGO OFICIAL NO FOOTER -->
+                    <svg class="footer-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="footerGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#D4B87A"/>
+                                <stop offset="50%" stop-color="#C5A059"/>
+                                <stop offset="100%" stop-color="#8B7040"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M50 6 C50 6 84 14 84 42 C84 70 50 94 50 94 C50 94 16 70 16 42 C16 14 50 6 50 6 Z" fill="url(#footerGold)"/>
+                        <path d="M50 12 C50 12 78 19 78 42 C78 64 50 86 50 86 C50 86 22 64 22 42 C22 19 50 12 50 12 Z" fill="#0B2545"/>
+                        <text x="50" y="52" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="url(#footerGold)">CHP</text>
+                        <path d="M38 62 L44 58 L50 60 L51 65 L46 69 L41 71 L37 66 Z" fill="#C5A059"/>
+                    </svg>
                     <h4>CHP-Angola Corretores de Seguros</h4>
                     <p style="margin-bottom: 16px;">Solidez, transparência e proteção integral para o cidadão e para o tecido empresarial angolano.</p>
                     <p style="font-size: 13px; line-height: 1.8;">
