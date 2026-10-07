@@ -117,7 +117,6 @@
             --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
 
-        /* ============ DARK MODE ============ */
         [data-theme="dark"] {
             --primary-blue: #0a1424;
             --primary-blue-light: #1a2740;
@@ -329,7 +328,7 @@
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .hero-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeInUp 0.8s 1.4s ease forwards; }
         
-        /* ============ TRUST STRIP CORRIGIDO ============ */
+        /* ============ TRUST STRIP ============ */
         .trust-strip { 
             display: flex; 
             justify-content: center; 
@@ -794,7 +793,7 @@
         [data-theme="dark"] .info-link { color: #E2E8F0; }
         .info-link:hover { color: var(--accent-gold); transform: translateX(4px); }
 
-        /* ============ FOOTER CORRIGIDO ============ */
+        /* ============ FOOTER ============ */
         footer { 
             background: #061529 !important; 
             color: #94A3B8 !important; 
@@ -835,50 +834,60 @@
         .footer-bottom a { color: var(--accent-gold) !important; text-decoration: none; cursor: none; }
         .footer-bottom a:hover { color: var(--accent-gold-light) !important; }
 
-        /* ============ FLUTUANTES CORRIGIDOS ============ */
+        /* ============ FLUTUANTES — TODOS DO MESMO TAMANHO ============ */
         .whatsapp-float {
             position: fixed; 
             bottom: 25px; 
             right: 25px;
-            width: 60px; height: 60px;
+            width: 56px; 
+            height: 56px;
             background: #25D366 !important;
             border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
             z-index: 999; 
             transition: all 0.3s ease;
             cursor: none;
         }
         .whatsapp-float:hover { transform: scale(1.08); }
-        .whatsapp-float svg { width: 32px; height: 32px; fill: white !important; }
+        .whatsapp-float svg { width: 28px; height: 28px; fill: white !important; }
 
         .chat-float {
             position: fixed; 
-            bottom: 95px; 
+            bottom: 92px; 
             right: 25px;
-            width: 54px; height: 54px;
+            width: 56px; 
+            height: 56px;
             background: #0B2545 !important;
             border: 2px solid #C5A059 !important;
             border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
             color: #C5A059 !important; 
-            z-index: 998; cursor: none;
+            z-index: 998; 
+            cursor: none;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         .chat-float:hover { transform: scale(1.08); background: #C5A059 !important; color: #0B2545 !important; }
-        .chat-float svg { width: 22px; height: 22px; }
+        .chat-float svg { width: 24px; height: 24px; }
 
         .back-to-top {
             position: fixed; 
-            bottom: 160px; 
+            bottom: 159px; 
             right: 25px;
-            width: 44px; height: 44px;
+            width: 56px; 
+            height: 56px;
             background: #0B2545 !important; 
             color: #C5A059 !important;
             border: 2px solid #C5A059 !important; 
             border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
             cursor: none; 
             opacity: 0; 
             visibility: hidden;
@@ -887,32 +896,32 @@
         }
         .back-to-top.show { opacity: 1; visibility: visible; }
         .back-to-top:hover { background: #C5A059 !important; color: #0B2545 !important; }
-        .back-to-top svg { width: 18px; height: 18px; }
+        .back-to-top svg { width: 24px; height: 24px; }
 
         .pwa-install-btn {
             position: fixed;
-            bottom: 215px;
+            bottom: 226px;
             right: 25px;
-            padding: 10px 16px;
+            padding: 12px 20px;
             background: linear-gradient(135deg, #C5A059, #D4B87A) !important;
             color: #0B2545 !important;
             border: none;
             border-radius: 50px;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 700;
             font-family: 'Inter', sans-serif;
             cursor: pointer;
             z-index: 998;
             display: none;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             box-shadow: 0 8px 20px -6px rgba(197, 160, 89, 0.5);
             transition: all 0.3s ease;
             white-space: nowrap;
         }
         .pwa-install-btn.show { display: inline-flex; }
         .pwa-install-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px -8px rgba(197, 160, 89, 0.7); }
-        .pwa-install-btn svg { width: 14px; height: 14px; }
+        .pwa-install-btn svg { width: 16px; height: 16px; }
 
         /* ============ MODAL iOS ============ */
         .ios-install-modal {
@@ -989,42 +998,42 @@
             .sim-step { font-size: 11px; padding: 6px 12px; }
             .contact-form-container { padding: 32px 24px; }
             
-            /* Flutuantes mobile */
+            /* FLUTUANTES MOBILE — TODOS DO MESMO TAMANHO */
             .whatsapp-float { 
-                width: 54px; 
-                height: 54px; 
+                width: 50px; 
+                height: 50px; 
                 bottom: 20px; 
                 right: 20px; 
             }
-            .whatsapp-float svg { width: 28px; height: 28px; }
-            
+            .whatsapp-float svg { width: 24px; height: 24px; }
+
             .chat-float { 
-                width: 48px; 
-                height: 48px; 
-                bottom: 85px; 
+                width: 50px; 
+                height: 50px; 
+                bottom: 80px; 
                 right: 20px; 
             }
             .chat-float svg { width: 20px; height: 20px; }
-            
+
             .back-to-top { 
-                width: 40px; 
-                height: 40px; 
-                bottom: 145px; 
+                width: 50px; 
+                height: 50px; 
+                bottom: 140px; 
                 right: 20px; 
             }
-            .back-to-top svg { width: 16px; height: 16px; }
-            
+            .back-to-top svg { width: 20px; height: 20px; }
+
             .pwa-install-btn {
-                bottom: 195px;
+                bottom: 200px;
                 right: 20px;
-                width: 40px;
-                height: 40px;
+                width: 50px;
+                height: 50px;
                 padding: 0;
                 justify-content: center;
                 border-radius: 50%;
             }
             .pwa-install-btn span { display: none; }
-            .pwa-install-btn svg { width: 18px; height: 18px; }
+            .pwa-install-btn svg { width: 22px; height: 22px; }
             
             .footer-bottom { justify-content: center; text-align: center; }
         }
