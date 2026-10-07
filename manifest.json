@@ -40,27 +40,21 @@
       "short_name": "Simulador",
       "description": "Calcular estimativa de seguro automóvel em 3 passos",
       "url": "./#simulador",
-      "icons": [
-        { "src": "./icons/icon-192.png", "sizes": "192x192" }
-      ]
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Pedir Cotação",
       "short_name": "Cotação",
       "description": "Pedir uma simulação personalizada",
       "url": "./#contacto",
-      "icons": [
-        { "src": "./icons/icon-192.png", "sizes": "192x192" }
-      ]
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Sobre Nós",
       "short_name": "Sobre",
       "description": "Conhecer a CHP-Angola",
       "url": "./#sobre",
-      "icons": [
-        { "src": "./icons/icon-192.png", "sizes": "192x192" }
-      ]
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192" }]
     }
   ],
   "related_applications": []
