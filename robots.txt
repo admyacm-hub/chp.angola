@@ -1,10 +1,16 @@
+# robots.txt — CHP-Angola
+# https://chp-angola.com/robots.txt
+
 User-agent: *
 Allow: /
+Disallow: /blog/rascunhos/
+Disallow: /*?utm_
 
-Disallow: /admin.html
-Disallow: /api/
-Disallow: /widgets/
+# Sitemap
+Sitemap: https://chp-angola.com/sitemap.xml
 
-Sitemap: https://admyacm-hub.github.io/chp.angola/sitemap.xml
-
-Crawl-delay: 1
+# Bloquear bots agressivos (opcional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+User-agent: SemrushBot
+Crawl-delay: 10
